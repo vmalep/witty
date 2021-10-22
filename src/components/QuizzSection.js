@@ -26,8 +26,7 @@ function QuizzSection() {
     useEffect(() => {
         axios.get(quizzURL)
             .then(res => {
-                console.log("res = " + res.results)
-                setQuizzList(res.results)
+                setQuizzList(res.data.results)
             })
             .then(
                 setDataLoaded(true)
@@ -44,11 +43,11 @@ function QuizzSection() {
           
                 dataLoaded &&
                 quizzList.map((element, index) => {  
-                    console.log("element = "+ element)
+                    /* console.log("element = ", element) */
                     return (
-                        <div key={index}>
-                            <QuizzCard quizzQuestion={element} />
-                        </div>
+                        <>
+                            <QuizzCard key={index} quizzQuestion={element} />
+                        </>
                     )
                 })
                 
