@@ -8,7 +8,7 @@ function QuizzSection() {
     const [quizzCat, setQuizzCat] = useState([
         {
             catName: "History",
-            catNb: "23",
+            catNb: "23"
         }
     ])
 
@@ -16,7 +16,10 @@ function QuizzSection() {
     const [quizzQuestNb, setQuizzQuestNb] = useState("10")
     const [quizzQuestType, setQuizzQuestType] = useState(["multiple", "boolean"])
 
+    
     setQuizzURL(`${quizzURL}?amount=${quizzQuestNb}&category=${quizzCat[0].catNb}&type=${quizzQuestType[0]}`)
+    
+    /* console.log("quizzURL = " + quizzURL) */
 
     useEffect(() => {
         axios.get({quizzURL})
@@ -29,7 +32,8 @@ function QuizzSection() {
             })
     }, [])
 
-    quizzList.map((element, index) => {    
+    quizzList.map((element, index) => {  
+        console.log("element)  
         return (
             <div key={index}>
                 <QuizzCard quizzQuestion={element} />
