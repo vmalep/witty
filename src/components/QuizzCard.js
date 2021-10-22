@@ -1,4 +1,5 @@
 const QuizzCard = (props) => {
+    /* console.log("props = " + props) */
 
     return (
         <>
