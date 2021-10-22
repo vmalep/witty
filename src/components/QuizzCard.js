@@ -2,19 +2,15 @@ const QuizzCard = (props) => {
 
     return (
         <>
-        {
-            props.quizzList.map((quizz, index) => {
+            <p>{props.question}</p>
+            <p>{props.correct_answer}</p>
+            <ul>{props.incorrect_answers.map((element, index) => {
                 return (
-                <div key={index}>
-                    <p>{quizz.category}</p>
-                    <p>{quizz.question}</p>
-                </div>
+                    <li>{element}</li>
                 )
-            })
-        }
+            })}</ul>
         </>
     )
-
 }
 
 export default QuizzCard
