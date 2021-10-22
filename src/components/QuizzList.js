@@ -31,9 +31,9 @@ function QuizzSection() {
 
     quizzList.map((element, index) => {    
         return (
-            <>
+            <div key={index}>
                 <QuizzCard quizzQuestion={element} />
-            </>
+            </div>
         )
     })
 }
