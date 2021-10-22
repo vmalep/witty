@@ -1,5 +1,5 @@
-import './App.css';
-import QuizzSection from './components/QuizzList';
+import './App.css'
+import QuizzSection from './components/QuizzSection'
 
 function App() {
   return (
