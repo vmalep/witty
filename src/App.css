@@ -2,6 +2,7 @@ body {
   width: clamp(360px, 100%, 700px);
   box-sizing: border-box;
   margin: 0 auto;
+  text-align: center;
 }
 
 .header {
@@ -14,4 +15,33 @@ h1 {
   line-height: 150px;
   color: whitesmoke;
   font-size: 50px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nickname {
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 5px;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+  background-color: rgb(11, 11, 194);
+  width: 185px;
+  padding: 18px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
