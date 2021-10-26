@@ -16,6 +16,9 @@ function QuizzSection() {
 
     const [quizzURL, setQuizzURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple")
     const [dataLoaded, setDataLoaded] = useState(false)
+    const [questCount, setQuestCount] = useState(0) // Keep track of the index number of the current question
+    const [score, setScore] = useState(0) // Keep track of the right answers
+
     /* const [quizzQuestNb, setQuizzQuestNb] = useState("10")
     const [quizzQuestType, setQuizzQuestType] = useState(["multiple", "boolean"])
 
@@ -35,6 +38,13 @@ function QuizzSection() {
                 console.log(err)
             })
     }, [])
+
+    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+        if (response === quizzList[questCount].correct_answer){
+            setScore(score + 1)
+        }
+        setQuestCount(questCount + 1)
+    }
 
     return (
         <>  
