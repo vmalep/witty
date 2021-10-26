@@ -5,6 +5,7 @@ import Avatar from "./components/Avatar"
 import InputBox from "./components/InputBox"
 import QuizzSection from './components/QuizzSection';
 
+document.title = "Witty"
 
 function App() {
   const [userName, setUserName] = useState(null);
