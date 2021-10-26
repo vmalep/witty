@@ -77,3 +77,25 @@ h2 {
   margin-top: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.usernamebox{
+  border: 2px solid rgb(212, 57, 18) ;
+}
+
+/* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.
+We can for example add a color property inside the category state and use it for the color of the category button */
+/* .categorybox1 {
+  border: 2px solid blue ;
+}
+
+.categorybox2 {
+  border: 2px solid yellow ;
+}
+
+.categorybox3 {
+  border: 2px solid green ;
+}
+
+.categorybox4 {
+  border: 2px solid purple ;
+} */
