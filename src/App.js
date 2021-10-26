@@ -1,7 +1,8 @@
 import './App.css';
 import { useState } from "react";
-import Header from "./components/Header.js"
-import InputBox from "./components/InputBox.js"
+import Header from "./components/Header"
+import Avatar from "./components/Avatar"
+import InputBox from "./components/InputBox"
 import QuizzSection from './components/QuizzSection';
 
 
@@ -11,10 +12,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {!userName
-      ? <InputBox setUserName={setUserName} />
-      : <QuizzSection />
-      }
+      {!userName ? <Avatar /> : null}
+      {!userName ? <InputBox setUserName={setUserName} /> : null}
+      {userName ? <QuizzSection /> : null}
     </div>
   );
 }

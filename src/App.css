@@ -42,6 +42,18 @@ button {
   background-color: rgb(11, 11, 194);
   width: 185px;
   padding: 18px;
-  margin-top: 20px;
+  margin: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.avatarbox {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+  
+.avatar {
+  width: 100px;
+  height: 100;
+  padding: 30px;
 }
