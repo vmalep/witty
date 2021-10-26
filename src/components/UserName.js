@@ -2,12 +2,12 @@ import {useRef} from "react";
 
 const UserName = (props) => {
 
-    const {setUserName, setAppStep} = props
+    const {setUserName, appStep, setAppStep} = props
     const inputRef = useRef();
 
     const handleClick = () => {
         inputRef.current.value && setUserName(inputRef.current.value)
-        setAppStep(1)
+        setAppStep(appStep + 1)
     }
 
     return (

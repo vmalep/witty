@@ -17,9 +17,23 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {appStep === 0 ? <Avatar  selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> : null}
-      {appStep === 0 ? <UserName setUserName={setUserName} setAppStep={setAppStep}/> : null}
-      {appStep === 1 ? <Category /> : null}
+
+      {appStep === 0 
+      ? <>
+          <Avatar selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> 
+          <UserName setUserName={setUserName} appStep={appStep} setAppStep={setAppStep} />
+        </>
+      : null}
+
+      {appStep === 1 
+      ? <Category 
+          userName={userName} 
+          selectedAvatar={selectedAvatar} 
+          appStep={appStep} 
+          setAppStep={setAppStep}
+        /> 
+      : null}
+
       {appStep === 2 ? <QuizzSection /> : null}
     </div>
   );
