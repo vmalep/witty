@@ -25,42 +25,37 @@ function QuizzSection() {
     useEffect(() => {
         setQuizzURL(`${baseUrl}?amount=${quizzQuestNb}&category=${quizzCat[0].catNb}&type=${quizzQuestType[0]}`)
     }, [quizzQuestNb, quizzQuestType, quizzCat]) */
-    
+
     useEffect(() => {
         axios.get(quizzURL)
-            .then(res => {
-                setQuizzList(res.data.results)
-            })
-            .then(
-                setDataLoaded(true)
-            )
-            .catch(err => {
-                console.log(err)
-            })
-    }, [])
+          .then(res => res.data.results.map((question, i) => ({...question, idNum: i + 1})))
+          .then(res => setQuizzList(res))
+          .then(setDataLoaded(true))
+          .catch(err => console.log(err))
+        }, [])
 
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        if (response === quizzList[questCount].correct_answer){
+        if (response === quizzList[questCount].correct_answer) {
             setScore(score + 1)
         }
         setQuestCount(questCount + 1)
     }
 
     return (
-        <>  
+        <>
             <h2>QuizzSection</h2>
             {   // Checking if the data is there
-          
+
                 dataLoaded &&
-                quizzList.map((element, index) => {  
-                    /* console.log("element = ", element) */
-                    return (
-                        <>
-                            <QuizzCard key={index} quizzQuestion={element} checkAnswer={checkAnswer} score={score} />
-                        </>
-                    )
-                })
-                
+                quizzList
+                    .filter((element) => quizzList.indexOf(element) === questCount)
+                    .map((element, index) => {
+                        console.log(element)
+                        return (
+                            <QuizzCard key={index} questCount={questCount} quizzQuestion={element} checkAnswer={checkAnswer} score={score} />
+                        )
+                    })
+
             }
         </>
     )
