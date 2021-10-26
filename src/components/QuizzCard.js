@@ -2,33 +2,40 @@ import { useEffect, useState } from "react";
 
 const QuizzCard = (props) => {
 
-    console.log("props: ", props)
-
-    const addCorrectAnswerAndShuffle = (correct_answer) => {
-        const newPossibleAnswers = possibleAnswers.slice();
-        newPossibleAnswers.push(correct_answer);
-        newPossibleAnswers.sort(() => Math.random() - 0.5);
-        setPossibleAnswers(newPossibleAnswers);
+    // Add the correct answer to the possible ones and shuffle them all
+    const addCorrectAnswerAndShuffle = () => {
+        const shuffledAnswers = possibleAnswers.slice()
+        /* newPossibleAnswers.push(correct_answer) */
+        shuffledAnswers.sort(() => Math.random() - 0.5)
+        setPossibleAnswers(shuffledAnswers)
     }
 
+    // List all the options (incorrect answers and then the correct one)
     const [possibleAnswers, setPossibleAnswers] = useState(props.quizzQuestion.incorrect_answers)
 
     useEffect(() => {
-        addCorrectAnswerAndShuffle(props.quizzQuestion.correct_answer)
+        const allAnswers = props.quizzQuestion.incorrect_answers.slice()
+        allAnswers.push(props.quizzQuestion.correct_answer)
+        setPossibleAnswers(allAnswers)
+    }, [props.questCount])
+
+    useEffect(() => {
+        const shuffledAnswers = possibleAnswers.slice()
+        shuffledAnswers.sort(() => Math.random() - 0.5)
+        setPossibleAnswers(shuffledAnswers)
     }, [])
 
     return (
         <>
             <p>score: {props.score}</p>
-            <p>question {props.questCount + 1}: {props.quizzQuestion.question}</p>
+            <p>question {props.quizzQuestion.idNum}: {props.quizzQuestion.question}</p>
             <div>
                 {possibleAnswers.map((element, index) => {
-                return (
-                    <button key={index} onClick={() => props.checkAnswer(element)}>{element}</button>
-                )
+                    return (
+                        <button key={index} onClick={() => props.checkAnswer(element)}>{element}</button>
+                    )
                 })}
             </div>
-
         </>
     )
 }
