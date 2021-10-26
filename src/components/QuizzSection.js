@@ -43,9 +43,7 @@ function QuizzSection() {
 
     return (
         <>
-            <h2>QuizzSection</h2>
             {   // Checking if the data is there
-
                 dataLoaded &&
                 quizzList
                     .filter((element) => quizzList.indexOf(element) === questCount)
@@ -55,7 +53,6 @@ function QuizzSection() {
                             <QuizzCard key={index} questCount={questCount} quizzQuestion={element} checkAnswer={checkAnswer} score={score} />
                         )
                     })
-
             }
         </>
     )

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './QuizzCard.css'
 
 const QuizzCard = (props) => {
 
@@ -26,7 +27,7 @@ const QuizzCard = (props) => {
     }, [])
 
     return (
-        <>
+        <div className="quizz-card">
             <p>score: {props.score}</p>
             <p>question {props.quizzQuestion.idNum}: {props.quizzQuestion.question}</p>
             <div>
@@ -36,7 +37,7 @@ const QuizzCard = (props) => {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
 

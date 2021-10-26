@@ -32,7 +32,7 @@ h1 {
   margin: 5px;
 }
 
-.button {
+button {
   border: none;
   border-radius: 10px;
   font-size: 20px;
