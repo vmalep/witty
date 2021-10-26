@@ -56,7 +56,7 @@ function QuizzSection() {
                     /* console.log("element = ", element) */
                     return (
                         <>
-                            <QuizzCard key={index} quizzQuestion={element} />
+                            <QuizzCard key={index} quizzQuestion={element} checkAnswer={checkAnswer} score={score} />
                         </>
                     )
                 })
