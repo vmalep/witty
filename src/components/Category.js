@@ -1,31 +1,17 @@
-import './App.css'
 
 const Category = () => {
+    const categories = ["history", "sport", "art"]
     return (
-        <>
-          <div class="usernamebox">
-              <p></p>
-              </div>
-              <div>
-              <p>Select your Categories</p>
-              </div>
-              <div class="categorybox1">
-              <p></p>
-              </div>
-              <div class="categorybox2">
-              <p></p>
-              </div>
-              <div class="categorybox3">
-              <p></p>
-              </div>
-              <div class="categorybox4">
-              <p></p>
-              </div>
-        </>
+        <div class="usernamebox">
+            {categories.map((element, index) => {
+                return (
+                    <button key={index} >{element}</button>
+                )
+            })}
+        </div>
     )
 }
 
 export default Category;
 
-
-
+/*onClick={() => props.checkAnswer(element)}*/
