@@ -2,23 +2,39 @@ import './App.css';
 import { useState } from "react";
 import Header from "./components/Header"
 import Avatar from "./components/Avatar"
-import InputBox from "./components/InputBox"
+import UserName from "./components/UserName"
 import Category from "./components/Category"
 import QuizzSection from './components/QuizzSection';
 
 document.title = "Witty"
 
 function App() {
+  const [appStep, setAppStep] = useState(0)
+
   const [userName, setUserName] = useState(null);
   const [selectedAvatar, setSelectedAvatar] = useState({});
 
   return (
     <div className="App">
       <Header />
-      {!userName ? <Avatar  selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> : null}
-      {!userName ? <InputBox setUserName={setUserName} /> : null}
-      <Category />
-      {userName ? <QuizzSection /> : null}
+
+      {appStep === 0 
+      ? <>
+          <Avatar selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> 
+          <UserName setUserName={setUserName} appStep={appStep} setAppStep={setAppStep} />
+        </>
+      : null}
+
+      {appStep === 1 
+      ? <Category 
+          userName={userName} 
+          selectedAvatar={selectedAvatar} 
+          appStep={appStep} 
+          setAppStep={setAppStep}
+        /> 
+      : null}
+
+      {appStep === 2 ? <QuizzSection /> : null}
     </div>
   );
 }
