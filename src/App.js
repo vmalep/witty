@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from "react";
 import Header from "./components/Header.js"
 import InputBox from "./components/InputBox.js"
-import QuizzSection from './components/QuizzList';
+import QuizzSection from './components/QuizzSection';
 
 
 function App() {
