@@ -1,36 +1,59 @@
-.App {
+body {
+  width: clamp(360px, 100%, 700px);
+  box-sizing: border-box;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: rgb(255, 136, 0);
+  height: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  text-align: center;
+  line-height: 150px;
+  color: whitesmoke;
+  font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
+.input-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nickname {
+  width: 300px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+  background-color: rgb(11, 11, 194);
+  width: 185px;
+  padding: 18px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.avatarbox {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+  
+.avatar {
+  width: 100px;
+  height: 100;
+  padding: 30px;
 }

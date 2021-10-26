@@ -1,0 +1,16 @@
+/* Temporary CSS, to be merged with the rest of the code */
+
+.quizz-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.quizz-card p{
+    margin:1rem;
+}
+
+.quizz-card div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
