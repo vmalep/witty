@@ -4,7 +4,6 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-
 .header {
   background-color: rgb(255, 136, 0);
   height: 150px;
@@ -47,13 +46,33 @@ button {
 }
 
 .avatarbox {
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 40px;
+display: inline-block;
+margin-left: 40px;
+margin-right: 40px;
 }
-  
+
 .avatar {
   width: 100px;
   height: 100;
   padding: 30px;
+}
+
+.usernamebox{
+  border: 2px solid rgb(212, 57, 18) ;
+}
+
+.categorybox1 {
+  border: 2px solid blue ;
+}
+
+.categorybox2 {
+  border: 2px solid yellow ;
+}
+
+.categorybox3 {
+  border: 2px solid green ;
+}
+
+.categorybox4 {
+  border: 2px solid purple ;
 }
