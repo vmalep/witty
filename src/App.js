@@ -10,11 +10,12 @@ document.title = "Witty"
 
 function App() {
   const [userName, setUserName] = useState(null);
+  const [selectedAvatar, setSelectedAvatar] = useState({});
 
   return (
     <div className="App">
       <Header />
-      {!userName ? <Avatar /> : null}
+      {!userName ? <Avatar  selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> : null}
       {!userName ? <InputBox setUserName={setUserName} /> : null}
       <Category />
       {userName ? <QuizzSection /> : null}
