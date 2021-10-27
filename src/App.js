@@ -4,7 +4,8 @@ import Header from "./components/Header"
 import Avatar from "./components/Avatar"
 import UserName from "./components/UserName"
 import Category from "./components/Category"
-import QuizSection from './components/QuizSection';
+import QuizSection from './components/QuizSection'
+import ScoreSection from './components/ScoreSection'
 
 document.title = "Witty"
 
@@ -13,6 +14,8 @@ function App() {
 
   const [userName, setUserName] = useState(null);
   const [selectedAvatar, setSelectedAvatar] = useState({});
+  const [scorePc, setScorePc] = useState(0) // Score of the user in %
+  const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
 
   return (
     <div className="App">
@@ -31,11 +34,13 @@ function App() {
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
           setAppStep={setAppStep}
+          setSeclectedCat={setSeclectedCat}
         /> 
       }
 
-      {appStep === 2 && <QuizSection />}
+      {appStep === 2 && <QuizSection selectedCat={selectedCat} scorePc={scorePc} setScorePc={setScorePc} />}
 
+      {appStep === 3 && <ScoreSection userName={userName} scorePc={scorePc}/>}
     </div>
   );
 }
