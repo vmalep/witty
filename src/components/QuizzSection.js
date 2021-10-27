@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import QuizzCard from './QuizzCard'
+import QuizzGenerator from '../utils/QuizzGenerator'
 
 function QuizzSection() {
     const [quizzList, setQuizzList] = useState([])
+    const [newQuizzList, setNewQuizzList] = useState([]) // for testing. Will replace quizzList later
 
     const [quizzCat, setQuizzCat] = useState([
         {
@@ -32,7 +34,9 @@ function QuizzSection() {
           .then(res => setQuizzList(res))
           .then(setDataLoaded(true))
           .catch(err => console.log(err))
-        }, [])
+    }, [])
+
+    if (Object.keys(quizzList).length !== 0) QuizzGenerator('trivia', quizzList)
 
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         if (response === quizzList[questCount].correct_answer) {
