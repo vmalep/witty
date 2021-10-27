@@ -16,6 +16,7 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
   const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
+  // 2BFixed: we should create a State that is an object and can receive all the shared parameters (userName, avatar, options choosen, score, etc.)
 
   return (
     <div className="App">
@@ -38,9 +39,19 @@ function App() {
         /> 
       }
 
-      {appStep === 2 && <QuizSection selectedCat={selectedCat} scorePc={scorePc} setScorePc={setScorePc} />}
+      {appStep === 2
+      && <QuizSection
+          appStep={appStep} 
+          setAppStep={setAppStep}
+          selectedCat={selectedCat}
+          setScorePc={setScorePc} />}
 
-      {appStep === 3 && <ScoreSection userName={userName} scorePc={scorePc}/>}
+      {appStep === 3
+      && <ScoreSection 
+          appStep={appStep} 
+          setAppStep={setAppStep}
+          userName={userName}
+          scorePc={scorePc}/>}
     </div>
   );
 }
