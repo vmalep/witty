@@ -25,6 +25,8 @@
                       )
                   })}
                   </div>
+                  <button className="button"
+                onClick={handleClick}>NEXT</button>
            </>
         )
     }
