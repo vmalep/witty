@@ -47,9 +47,7 @@ function QuizGenerator(api, apiData) {
 
     //This part decodes special characters like &#039;
     function possibleAnswersGenerator(array, string) {
-        const possibleAnswers = array.map(element => {
-            decodeSpecialChar(element)
-        })
+        const possibleAnswers = array.map(element => decodeSpecialChar(element))
         possibleAnswers.push(decodeSpecialChar(string))
         
         return shuffleArray(possibleAnswers)
