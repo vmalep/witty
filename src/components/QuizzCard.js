@@ -11,6 +11,14 @@ const QuizzCard = (props) => {
         setPossibleAnswers(shuffledAnswers)
     }
 
+    //This part decodes special characters like &#039;
+    function decodeSpecialChar(string) {
+        const parser = new DOMParser();
+        const decodedString = parser.parseFromString(`<!doctype html><body>${string}`, 'text/html').body.textContent;
+        /* console.log(decodedString); */
+        return decodedString
+    }
+
     // List all the options (incorrect answers and then the correct one)
     const [possibleAnswers, setPossibleAnswers] = useState(props.quizzQuestion.incorrect_answers)
 
@@ -26,10 +34,12 @@ const QuizzCard = (props) => {
         setPossibleAnswers(shuffledAnswers)
     }, [])
 
+    const decodedQuest = decodeSpecialChar(props.quizzQuestion.question)
+
     return (
         <div className="quizz-card">
             <p>score: {props.score}</p>
-            <p>question {props.quizzQuestion.idNum}: {props.quizzQuestion.question}</p>
+            <p>question {props.quizzQuestion.idNum}: {decodedQuest}</p>
             <div>
                 {possibleAnswers.map((element, index) => {
                     return (
