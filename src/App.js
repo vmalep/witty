@@ -19,22 +19,22 @@ function App() {
       <Header />
 
       {appStep === 0 
-      ? <>
+      && <>
           <Avatar selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> 
           <UserName setUserName={setUserName} appStep={appStep} setAppStep={setAppStep} />
         </>
-      : null}
+      }
 
       {appStep === 1 
-      ? <Category 
+      && <Category 
           userName={userName} 
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
           setAppStep={setAppStep}
         /> 
-      : null}
+      }
 
-      {appStep === 2 ? <QuizzSection /> : null}
+      {appStep === 2 && <QuizzSection />}
     </div>
   );
 }
