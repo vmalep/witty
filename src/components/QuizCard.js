@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import './QuizzCard.css'
+import './QuizCard.css'
 
-const QuizzCard = (props) => {
+const QuizCard = (props) => {
 
     // Add the correct answer to the possible ones and shuffle them all
     const addCorrectAnswerAndShuffle = () => {
@@ -20,11 +20,11 @@ const QuizzCard = (props) => {
     }
 
     // List all the options (incorrect answers and then the correct one)
-    const [possibleAnswers, setPossibleAnswers] = useState(props.quizzQuestion.incorrect_answers)
+    const [possibleAnswers, setPossibleAnswers] = useState(props.quizQuestion.incorrect_answers)
 
     useEffect(() => {
-        const allAnswers = props.quizzQuestion.incorrect_answers.slice()
-        allAnswers.push(props.quizzQuestion.correct_answer)
+        const allAnswers = props.quizQuestion.incorrect_answers.slice()
+        allAnswers.push(props.quizQuestion.correct_answer)
         setPossibleAnswers(allAnswers)
     }, [props.questCount])
 
@@ -34,12 +34,12 @@ const QuizzCard = (props) => {
         setPossibleAnswers(shuffledAnswers)
     }, [])
 
-    const decodedQuest = decodeSpecialChar(props.quizzQuestion.question)
+    const decodedQuest = decodeSpecialChar(props.quizQuestion.question)
 
     return (
-        <div className="quizz-card">
+        <div className="quiz-card">
             <p>score: {props.score}</p>
-            <p>question {props.quizzQuestion.idNum}: {decodedQuest}</p>
+            <p>question {props.quizQuestion.idNum}: {decodedQuest}</p>
             <div>
                 {possibleAnswers.map((element, index) => {
                     return (
@@ -51,4 +51,4 @@ const QuizzCard = (props) => {
     )
 }
 
-export default QuizzCard
+export default QuizCard

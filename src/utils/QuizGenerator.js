@@ -1,14 +1,14 @@
 import { useState } from "react"
 
-function QuizzGenerator(api, apiData) {
+function QuizGenerator(api, apiData) {
     console.log("api: " + api)
     console.log("apiData: ", apiData)
-    const [quizzList, setQuizzList] = useState({})
+    const [quizList, setQuizList] = useState({})
 
-    // The QuizzList to be return, with always the same structure:
+    // The QuizList to be return, with always the same structure:
     //  {
     //  category: "history", 
-    //      quizz: {
+    //      quiz: {
     //          [
     //              questNum: 1, 
     //              difficulty: 'medium',   
@@ -31,13 +31,13 @@ function QuizzGenerator(api, apiData) {
     //  2) Special HTML characters like &quot; must be decoded
     
     const triviaGenerator = () => {
-        setQuizzList(apiData.map(element => {
-                
+        setQuizList(apiData.map(element => {
+
             })
         )
     }
 
-    return quizzList
+    return quizList
 }
 
-export default QuizzGenerator
+export default QuizGenerator
