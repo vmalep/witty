@@ -1,4 +1,5 @@
-import { useState } from "react"
+import ShuffleArray from './ShuffleArray'
+import DecodeSpecialChar from './DecodeSpecialChar'
 
 function QuizGenerator(api, apiData) {
 /*     console.log("api: " + api)
@@ -25,30 +26,12 @@ function QuizGenerator(api, apiData) {
     //          ]
     //          [...]
     //  }
-    // Requisites:
-    //  1) possible_answers must contain the right answer and be shuffled
-    //  2) Special HTML characters like &quot; must be decoded
-    
-    function shuffleArray(array) {
-        const shuffledArray = array.slice()
-        shuffledArray.sort(() => Math.random() - 0.5)
-        return shuffledArray
-    }
 
-    //This part decodes special characters like &#039;
-    function decodeSpecialChar(string) {
-        const parser = new DOMParser();
-        const decodedString = parser.parseFromString(`<!doctype html><body>${string}`, 'text/html').body.textContent;
-        /* console.log(decodedString); */
-        return decodedString
-    }
-
-    //This part decodes special characters like &#039;
     function possibleAnswersGenerator(array, string) {
-        const possibleAnswers = array.map(element => decodeSpecialChar(element))
-        possibleAnswers.push(decodeSpecialChar(string))
+        const possibleAnswers = array.map(element => DecodeSpecialChar(element))
+        possibleAnswers.push(DecodeSpecialChar(string))
         
-        return shuffleArray(possibleAnswers)
+        return ShuffleArray(possibleAnswers)
     }
 
     function triviaGenerator(apiData) {
@@ -57,8 +40,8 @@ function QuizGenerator(api, apiData) {
                     category: element.category,
                     questNum: index + 1,
                     difficulty: element.difficulty,
-                    question: decodeSpecialChar(element.question),
-                    correct_answer: decodeSpecialChar(element.correct_answer),
+                    question: DecodeSpecialChar(element.question),
+                    correct_answer: DecodeSpecialChar(element.correct_answer),
                     possible_answers: possibleAnswersGenerator(element.incorrect_answers, element.correct_answer)
             })
         )

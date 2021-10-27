@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import './QuizCard.css'
 
 const QuizCard = (props) => {
