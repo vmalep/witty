@@ -12,9 +12,10 @@ const UserName = (props) => {
 
     return (
         <div className="input-container">
-            <input placeholder="Enter your nickname" className="nickname" ref={inputRef} />
-            <button className="button"
-                onClick={handleClick}>NEXT</button>
+            <form onSubmit={handleClick}>
+                <input placeholder="Enter your nickname" className="nickname" ref={inputRef} required/>
+                <input className="button" type="submit" value="NEXT"/>
+            </form>
         </div>
     )
 }
