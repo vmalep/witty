@@ -34,9 +34,11 @@ function QuizSection() {
           .then(res => setQuizList(res))
           .then(setDataLoaded(true))
           .catch(err => console.log(err))
-    }, [])
-
-    if (Object.keys(quizList).length !== 0) setNewQuizList(QuizGenerator('trivia', quizList))
+        }, [])
+        
+    useEffect(() => {
+        if (Object.keys(quizList).length !== 0) setNewQuizList(QuizGenerator('trivia', quizList))
+    }, [quizList])
 
     console.log("newQuizList: ", newQuizList)
 

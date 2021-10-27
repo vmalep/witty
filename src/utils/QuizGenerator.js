@@ -30,10 +30,11 @@ function QuizGenerator(api, apiData) {
     //  1) possible_answers must contain the right answer and be shuffled
     //  2) Special HTML characters like &quot; must be decoded
     
-    function shuffleArray(array) => {
-        const shuffledarray = array.slice()
-        shuffledarray.sort(() => Math.random() - 0.5)
-        return shuffledarray
+    function shuffleArray(array) {
+        console.log("before shuffle" + array)
+        const shuffledArray = array.slice()
+        shuffledArray.sort(() => Math.random() - 0.5)
+        return shuffledArray
     }
 
     //This part decodes special characters like &#039;
@@ -44,6 +45,16 @@ function QuizGenerator(api, apiData) {
         return decodedString
     }
 
+    //This part decodes special characters like &#039;
+    function possibleAnswersGenerator(array, string) {
+        const possibleAnswers = array.map(element => {
+            decodeSpecialChar(element)
+        })
+        possibleAnswers.push(decodeSpecialChar(string))
+        
+        return shuffleArray(possibleAnswers)
+    }
+
     function triviaGenerator(apiData) {
 
         const newQuizList = apiData.map((element, index) => ({
@@ -52,11 +63,12 @@ function QuizGenerator(api, apiData) {
                     questNum: index + 1,
                     difficulty: element.difficulty,
                     question: decodeSpecialChar(element.question),
-                    correct_answer: shuffleArray(element.correct_answer.push(element.question)),
-                    possible_answers: element.possible_answers
+                    correct_answer: decodeSpecialChar(element.correct_answer),
+                    possible_answers: possibleAnswersGenerator(element.incorrect_answers, element.correct_answer)
                 }
             })
         )
+
         return newQuizList
     }
 
