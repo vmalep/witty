@@ -4,8 +4,8 @@ import QuizCard from './QuizCard'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection() {
+    const [apiData, setApiData] = useState([])
     const [quizList, setQuizList] = useState([])
-    const [newQuizList, setNewQuizList] = useState([]) // for testing. Will replace quizList later
 
     const [quizCat, setQuizCat] = useState([
         {
@@ -30,17 +30,17 @@ function QuizSection() {
 
     useEffect(() => {
         axios.get(quizURL)
-          .then(res => res.data.results.map((question, i) => ({...question, idNum: i + 1})))
-          .then(res => setQuizList(res))
+          /* .then(res => res.data.results.map((question, i) => ({...question, idNum: i + 1}))) */
+          .then(res => setApiData(res.data.results))
           .then(setDataLoaded(true))
           .catch(err => console.log(err))
         }, [])
         
     useEffect(() => {
-        if (Object.keys(quizList).length !== 0) setNewQuizList(QuizGenerator('trivia', quizList))
-    }, [quizList])
+        if (Object.keys(apiData).length !== 0) setQuizList(QuizGenerator('trivia', apiData))
+    }, [apiData])
 
-    console.log("newQuizList: ", newQuizList)
+    console.log("quizList: ", quizList)
 
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         if (response === quizList[questCount].correct_answer) {
@@ -58,7 +58,7 @@ function QuizSection() {
                     .map((element, index) => {
                         console.log(element)
                         return (
-                            <QuizCard key={index} questCount={questCount} quizQuestion={element} checkAnswer={checkAnswer} score={score} />
+                            <QuizCard key={element.questNum} quizQuestion={element} checkAnswer={checkAnswer} score={score} />
                         )
                     })
             }

@@ -1,15 +1,14 @@
 import { useState } from "react"
 
 function QuizGenerator(api, apiData) {
-    console.log("api: " + api)
-    console.log("apiData: ", apiData)
+/*     console.log("api: " + api)
+    console.log("apiData: ", apiData) */
     /* const [quizList, setQuizList] = useState({}) */
 
     // The QuizList to be return, with always the same structure:
-    //  {
-    //  category: "history", 
-    //      quiz: {
+    // {
     //          [
+    //              category: 'history'
     //              questNum: 1, 
     //              difficulty: 'medium',   
     //              question: 'Which of these countries was sea charted in 1500 by the Portuguese maritime explorations?',
@@ -17,6 +16,7 @@ function QuizGenerator(api, apiData) {
     //              correct_answer: 'Brazil'
     //          ],
     //          [
+    //              category: 'history'
     //              questNum: 2,
     //              difficulty: 'medium',
     //              question: 'Which infamous European traitor was known as "the last person to enter Parliament with honest intentions"?',
@@ -24,14 +24,12 @@ function QuizGenerator(api, apiData) {
     //              correct_answer: 'Guy Fawkes'
     //          ]
     //          [...]
-    //      }
     //  }
     // Requisites:
     //  1) possible_answers must contain the right answer and be shuffled
     //  2) Special HTML characters like &quot; must be decoded
     
     function shuffleArray(array) {
-        console.log("before shuffle" + array)
         const shuffledArray = array.slice()
         shuffledArray.sort(() => Math.random() - 0.5)
         return shuffledArray
@@ -56,14 +54,12 @@ function QuizGenerator(api, apiData) {
     function triviaGenerator(apiData) {
 
         const newQuizList = apiData.map((element, index) => ({
-                category: element.category,
-                quiz: {
+                    category: element.category,
                     questNum: index + 1,
                     difficulty: element.difficulty,
                     question: decodeSpecialChar(element.question),
                     correct_answer: decodeSpecialChar(element.correct_answer),
                     possible_answers: possibleAnswersGenerator(element.incorrect_answers, element.correct_answer)
-                }
             })
         )
 
