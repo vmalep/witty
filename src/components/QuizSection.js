@@ -36,7 +36,9 @@ function QuizSection() {
           .catch(err => console.log(err))
     }, [])
 
-    if (Object.keys(quizList).length !== 0) QuizGenerator('trivia', quizList)
+    if (Object.keys(quizList).length !== 0) setNewQuizList(QuizGenerator('trivia', quizList))
+
+    console.log("newQuizList: ", newQuizList)
 
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         if (response === quizList[questCount].correct_answer) {

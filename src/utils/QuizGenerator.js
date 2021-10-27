@@ -3,7 +3,7 @@ import { useState } from "react"
 function QuizGenerator(api, apiData) {
     console.log("api: " + api)
     console.log("apiData: ", apiData)
-    const [quizList, setQuizList] = useState({})
+    /* const [quizList, setQuizList] = useState({}) */
 
     // The QuizList to be return, with always the same structure:
     //  {
@@ -30,14 +30,37 @@ function QuizGenerator(api, apiData) {
     //  1) possible_answers must contain the right answer and be shuffled
     //  2) Special HTML characters like &quot; must be decoded
     
-    const triviaGenerator = () => {
-        setQuizList(apiData.map(element => {
-
-            })
-        )
+    function shuffleArray(array) => {
+        const shuffledarray = array.slice()
+        shuffledarray.sort(() => Math.random() - 0.5)
+        return shuffledarray
     }
 
-    return quizList
+    //This part decodes special characters like &#039;
+    function decodeSpecialChar(string) {
+        const parser = new DOMParser();
+        const decodedString = parser.parseFromString(`<!doctype html><body>${string}`, 'text/html').body.textContent;
+        /* console.log(decodedString); */
+        return decodedString
+    }
+
+    function triviaGenerator(apiData) {
+
+        const newQuizList = apiData.map((element, index) => ({
+                category: element.category,
+                quiz: {
+                    questNum: index + 1,
+                    difficulty: element.difficulty,
+                    question: decodeSpecialChar(element.question),
+                    correct_answer: shuffleArray(element.correct_answer.push(element.question)),
+                    possible_answers: element.possible_answers
+                }
+            })
+        )
+        return newQuizList
+    }
+
+    return triviaGenerator(apiData)
 }
 
 export default QuizGenerator
