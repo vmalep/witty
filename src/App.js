@@ -4,7 +4,8 @@ import Header from "./components/Header"
 import Avatar from "./components/Avatar"
 import UserName from "./components/UserName"
 import Category from "./components/Category"
-import QuizSection from './components/QuizSection';
+import QuizSection from './components/QuizSection'
+import ScoreSection from './components/ScoreSection'
 
 document.title = "Witty"
 
@@ -13,6 +14,9 @@ function App() {
 
   const [userName, setUserName] = useState(null);
   const [selectedAvatar, setSelectedAvatar] = useState({});
+  const [scorePc, setScorePc] = useState(0) // Score of the user in %
+  const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
+  // 2BFixed: we should create a State that is an object and can receive all the shared parameters (userName, avatar, options choosen, score, etc.)
 
   return (
     <div className="App">
@@ -31,11 +35,23 @@ function App() {
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
           setAppStep={setAppStep}
+          setSeclectedCat={setSeclectedCat}
         /> 
       }
 
-      {appStep === 2 && <QuizSection />}
+      {appStep === 2
+      && <QuizSection
+          appStep={appStep} 
+          setAppStep={setAppStep}
+          selectedCat={selectedCat}
+          setScorePc={setScorePc} />}
 
+      {appStep === 3
+      && <ScoreSection 
+          appStep={appStep} 
+          setAppStep={setAppStep}
+          userName={userName}
+          scorePc={scorePc}/>}
     </div>
   );
 }

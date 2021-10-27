@@ -3,7 +3,9 @@ import axios from 'axios'
 import QuizCard from './QuizCard'
 import QuizGenerator from '../utils/QuizGenerator'
 
-function QuizSection() {
+function QuizSection(props) {
+    const {appStep, setAppStep, selectedCat, setScorePc} = props
+
     const [apiData, setApiData] = useState([])
     const [quizList, setQuizList] = useState([])
 
@@ -37,7 +39,9 @@ function QuizSection() {
         }, [])
         
     useEffect(() => {
-        if (Object.keys(apiData).length !== 0) setQuizList(QuizGenerator('trivia', apiData))
+        if (Object.keys(apiData).length !== 0){
+            setQuizList(QuizGenerator('trivia', apiData))
+        }
     }, [apiData])
 
     console.log("quizList: ", quizList)
@@ -47,6 +51,11 @@ function QuizSection() {
             setScore(score + 1)
         }
         setQuestCount(questCount + 1)
+        if(quizList[questCount].questNum >= quizList.length){
+            setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
+            setAppStep(3)
+        }
+            
     }
 
     return (
