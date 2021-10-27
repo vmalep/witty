@@ -34,7 +34,7 @@ function App() {
         /> 
       }
 
-      {appStep === 2 && <QuizzSection />}
+      {appStep === 2 && <QuizSection />}
 
     </div>
   );
