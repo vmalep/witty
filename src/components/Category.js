@@ -9,7 +9,7 @@ const Category = (props) => {
     }
 
     return (
-        <div class="usernamebox">
+        <div className="usernamebox">
             {categories.map((element, index) => {
                 return (
                     <button key={index} onClick={handleClick} >{element}</button>
