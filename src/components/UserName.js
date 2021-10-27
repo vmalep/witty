@@ -1,12 +1,13 @@
 import {useRef} from "react";
 
-const InputBox = ({setUserName}) => {
+const UserName = (props) => {
+
+    const {setUserName, appStep, setAppStep} = props
     const inputRef = useRef();
 
     const handleClick = () => {
-        return (
         inputRef.current.value && setUserName(inputRef.current.value)
-        )
+        setAppStep(appStep + 1)
     }
 
     return (
@@ -18,4 +19,4 @@ const InputBox = ({setUserName}) => {
     )
 }
 
-export default InputBox;
+export default UserName;
