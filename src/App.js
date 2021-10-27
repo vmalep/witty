@@ -4,7 +4,7 @@ import Header from "./components/Header"
 import Avatar from "./components/Avatar"
 import UserName from "./components/UserName"
 import Category from "./components/Category"
-import QuizzSection from './components/QuizzSection';
+import QuizSection from './components/QuizSection';
 
 document.title = "Witty"
 
@@ -35,6 +35,7 @@ function App() {
       }
 
       {appStep === 2 && <QuizzSection />}
+
     </div>
   );
 }

@@ -31,6 +31,6 @@
         )
     }
 
-export default Category;
+    export default Category;
 
  /*onClick={() => props.checkAnswer(element)}*/
