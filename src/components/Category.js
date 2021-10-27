@@ -9,7 +9,7 @@
 
      return (
             <>
-            <h2>Select your Category</h2>
+            <h2>Select your Difficulty</h2>
             <div className = "level">
                 {level.map((element,index) => {
                     return(
@@ -17,7 +17,7 @@
                     )
                     })}
             </div>
-    
+            <h2>Select your Category</h2>
               <div className="usernamebox">
                   {categories.map((element , index) => {
                       return(
