@@ -14,3 +14,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+right-answer-btn{
+    background-color: green;
+}
+
+wrong-answer-btn{
+    background-color: red;
+}

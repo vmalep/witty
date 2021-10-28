@@ -1,8 +1,40 @@
+import { useState } from 'react'
 import './QuizCard.css'
 
 const QuizCard = (props) => {
-    const {quizQuestion, checkAnswer, score} = props
+    const {
+        quizQuestion, 
+        questCount, 
+        quizList, 
+        score, 
+        setScore,
+        setQuestCount,
+        setScorePc,
+        setAppStep
+    } = props
 
+    const [rightAnswerBtnIndex, setRightAnswerBtnIndex] = useState('')
+    const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
+    
+    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+        console.log(nextBtnDisabled)
+        if (response === quizList[questCount].correct_answer) {
+            setRightAnswerBtnIndex(response.index)
+            setScore(score + 1)
+        }
+        setNextBtnDisabled(false, "blue")
+    }
+    
+    const handleNext = () => {
+        // If we have reached the last question, we move to the next step: Score section
+        if(quizList[questCount].questNum >= quizList.length){
+            setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
+            setAppStep(3)
+        } else {
+            setQuestCount(questCount + 1) // Otherwise, we move to the next question     
+        }
+    }
+    
     return (
         <div className="quiz-card">
             <p>score: {score}</p>
@@ -10,10 +42,23 @@ const QuizCard = (props) => {
             <div>
                 {quizQuestion.possible_answers.map((element, index) => {
                     return (
-                        <button key={index} onClick={() => checkAnswer(element)}>{element}</button>
+                        <button
+                            key={index}
+                            className={rightAnswerBtnIndex === index ? "right-answer-btn" : null}
+                            onClick={() => checkAnswer(element)}
+                        >
+                            {element}
+                        </button>
                     )
                 })}
             </div>
+            <button
+                onClick={handleNext}
+                disabled={nextBtnDisabled[0]}
+                style={{backgroundColor: nextBtnDisabled[1]}}
+            >
+                Next question
+            </button>
         </div>
     )
 }
