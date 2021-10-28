@@ -20,7 +20,7 @@ function QuizSection(props) {
     const [quizQuestType, setQuizQuestType] = useState(["multiple", "boolean"])
 
     useEffect(() => {
-        setQuizURL(`${baseUrl}?amount=${quizQuestNb}&category=${quizCat[0].catNb}&type=${quizQuestType[0]}`)
+        setQuizURL(`${baseUrl}?amount=${quizQuestNb}&category=${selectedCategory}&type=${quizQuestType[0]}`)
     }, [quizQuestNb, quizQuestType, quizCat])
 
     useEffect(() => {
