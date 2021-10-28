@@ -19,9 +19,9 @@ function QuizSection(props) {
 
     const baseUrl = "https://opentdb.com/api.php"
 
-    const [quizURL, setQuizURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple")
+    /* const [quizURL, setQuizURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple") */
     
-    setQuizURL(`${baseUrl}${amountParam}${catParam}${typeParam}`)
+    const quizURL = `${baseUrl}${amountParam}${catParam}${typeParam}`
     console.log("quizURL: " + quizURL)
 
     useEffect(() => {
