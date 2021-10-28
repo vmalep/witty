@@ -1,54 +1,21 @@
  import {useState} from "react";
- import axios from "axios";
+ import { TriviaAPI } from "../utils/TriviaAPI";
  
  const Category = (props) => {
-    const [ quizCategory , setQuizCategory] = useState ([]);
-    const {userName, selectedAvatar, appStep, setAppStep} = props
-    //const categories = ["History", "Sport","Art","Music"]
+    const {userName, selectedAvatar, setAppStep, selectedCategory, setSelectedCategory} = props
     const level = ["Easy","Medium","Hard"]
 
-/*
-    const categories = [
-        {
-            catName: "History",
-            catNb: "23",
-            color: "green"
-        },
-        {  
-            catName: "Sport",
-            catNb: "21",
-            color: "blue"
-        },
-        {
-            name:"Art",
-            catNb: "25",
-            color:"yellow"
-        },
-        {
-            name:"Music",
-            catNb:"12",
-            color:"pink"
-        }
-     ]
-     */
-    
-     const getQuizCategory = () => {
-        axios
-        .get('https://opentdb.com/api.php?amount=10&category')
-        .then((response) => response.data)
-        .then((data) => {
-          setQuizCategory(data.results[0]);
-        });
-    };
+
 
     const handleClick = () => {
-        setAppStep(appStep + 1)
+        setAppStep(2)
     }
-/*
-    const handleCategoryClick = (element) => {
-        setQuizCategory(element);
+
+    const handleCategory = (element) => {
+        console.log(element.catNb)
+        setSelectedCategory(element.catNb);
     }
-    */
+    
 
      return (
             <>
@@ -67,12 +34,13 @@
                 </div>
                 <h2>Select your Category</h2>
                 <div className="usernamebox">
-                    {quizCategory.map((element , index) => {
+                    {TriviaAPI.map((element , index) => {
                         return(
                             <button
                                     key={index}
-                                    onClick={setQuizCategory(element)} 
-                            >{element}</button>       
+                                    onClick={() => handleCategory(element)} 
+                                    color={element.color}
+                            >{element.catName}</button>   
                         )
                     })}
                           
