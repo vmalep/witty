@@ -1,7 +1,7 @@
 body {
   width: clamp(360px, 100%, 700px);
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0em auto;
   text-align: center;
   background-color: rgb(255, 239, 159);
 }
@@ -9,6 +9,7 @@ body {
 .header {
   background-color: rgb(243, 17, 73 );
   height: 150px;
+  margin-top: -3em;
 }
 
 h1 {
