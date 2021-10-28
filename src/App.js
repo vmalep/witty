@@ -41,14 +41,12 @@ function App() {
 
       {appStep === 2
       && <QuizSection
-          appStep={appStep} 
           setAppStep={setAppStep}
           selectedCategory={selectedCategory}
           setScorePc={setScorePc} />}
 
       {appStep === 3
       && <ScoreSection 
-          appStep={appStep} 
           setAppStep={setAppStep}
           userName={userName}
           scorePc={scorePc}/>}

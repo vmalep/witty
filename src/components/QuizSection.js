@@ -4,17 +4,10 @@ import QuizCard from './QuizCard'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection(props) {
-    const {appStep, setAppStep, selectedCat, setScorePc} = props
+    const {setAppStep, selectedCategory, setScorePc} = props
 
     const [apiData, setApiData] = useState([])
     const [quizList, setQuizList] = useState([])
-
-    const [quizCat, setQuizCat] = useState([
-        {
-            catName: "History",
-            catNb: "23"
-        }
-    ])
 
     const baseUrl = "https://opentdb.com/api.php"
 
@@ -23,12 +16,12 @@ function QuizSection(props) {
     const [questCount, setQuestCount] = useState(0) // Keep track of the index number of the current question
     const [score, setScore] = useState(0) // Keep track of the right answers
 
-    /* const [quizQuestNb, setQuizQuestNb] = useState("10")
+    const [quizQuestNb, setQuizQuestNb] = useState("10")
     const [quizQuestType, setQuizQuestType] = useState(["multiple", "boolean"])
 
     useEffect(() => {
         setQuizURL(`${baseUrl}?amount=${quizQuestNb}&category=${quizCat[0].catNb}&type=${quizQuestType[0]}`)
-    }, [quizQuestNb, quizQuestType, quizCat]) */
+    }, [quizQuestNb, quizQuestType, quizCat])
 
     useEffect(() => {
         axios.get(quizURL)
