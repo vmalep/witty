@@ -15,10 +15,10 @@
     justify-content: center;
 }
 
-right-answer-btn{
+.right-answer-btn{
     background-color: green;
 }
 
-wrong-answer-btn{
+.wrong-answer-btn{
     background-color: red;
 }
