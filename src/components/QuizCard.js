@@ -36,8 +36,8 @@ const QuizCard = (props) => {
     
     return (
         <div className="quiz-card">
-            <p>score: {score}</p>
-            <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
+            <h2>score: {score}</h2>
+            <h2>question {quizQuestion.questNum}: {quizQuestion.question}</h2>
             <div>
                 {quizQuestion.possible_answers.map((element, index) => {
                     console.log(quizQuestion.correct_answer + "-" + element)
