@@ -8,12 +8,12 @@ const Avatar = (props) => {
     }
 
     const avatarImages = [
-        {src: "https://cdn.iconscout.com/icon/free/png-64/pokemon-7-282136.png", alt:"pikachu"},
-        {src: "https://cdn.iconscout.com/icon/free/png-64/pokemon-egg-togepi-cartoon-video-game-32211.png", alt:"pokemeon1"},
-        {src: "https://cdn.iconscout.com/icon/free/png-64/squirtle-pokemon-water-wartortle-cartoon-32212.png", alt:"togepi"},
-        {src: "https://cdn.iconscout.com/icon/free/png-64/jigglypuff-pokemon-pokemongo-cartoon-video-game-evolution-wigglytuff-32213.png", alt:"poliwag"},
-        {src: "https://cdn.iconscout.com/icon/free/png-64/poliwag-pokemon-pokemongo-electric-grass-cartoon-32214.png", alt:"squirtle"},
-        {src: "https://cdn.iconscout.com/icon/free/png-64/victini-pokemon-cartoon-victory-animal-32209.png", alt:"victini"}
+        {src: "https://cdn.iconscout.com/icon/free/png-64/gotham-girl-1502913-1273128.png", alt:"gotham"},
+        {src: "https://cdn.iconscout.com/icon/free/png-64/cassandra-cain-1502886-1273101.png", alt:"cassandra"},
+        {src: "https://cdn.iconscout.com/icon/free/png-64/thor-avengers-1502879-1273094.png", alt:"thor"},
+        {src: "https://cdn.iconscout.com/icon/free/png-64/spiderman-1502925-1273046.png", alt:"spiderman"},
+        {src: "https://cdn.iconscout.com/icon/free/png-64/jubilee-1502873-1273088.png", alt:"jubilee"},
+        {src: "https://cdn.iconscout.com/icon/free/png-64/ironman-marvel-super-hero-earth-saver-avenger-28699.png", alt:"ironman"}
     ]
 
     return (
