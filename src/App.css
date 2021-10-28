@@ -101,6 +101,28 @@ button {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.current-player {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.current-player-name {
+  color:rgb(110, 146, 43);
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.current-player-avatar {
+  width: 70px;
+  height: 70;
+  padding: 10px;
+  border: none;
+  border-radius: 80px;
+  background-color: rgb(110, 146, 43);
+}
+
 
 .categorybox {
   display: inline-block;
@@ -108,9 +130,7 @@ button {
   margin-right: 40px;
 }
 
-.usernamebox{
-  border: 2px solid rgb(212, 57, 18) ;
-}
+
 
 /* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.
 We can for example add a color property inside the category state and use it for the color of the category button */

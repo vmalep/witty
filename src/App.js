@@ -11,7 +11,7 @@ document.title = "Witty"
 
 function App() {
   const [appStep, setAppStep] = useState(0)
-
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [userName, setUserName] = useState(null);
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
@@ -34,8 +34,8 @@ function App() {
           userName={userName} 
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
-          setAppStep={setAppStep}
-          setSeclectedCat={setSeclectedCat}
+          setAppStep={setAppStep}         
+          setSelectedCategory={setSelectedCategory}
         /> 
       }
 
@@ -43,7 +43,7 @@ function App() {
       && <QuizSection
           appStep={appStep} 
           setAppStep={setAppStep}
-          selectedCat={selectedCat}
+          selectedCategory={selectedCategory}
           setScorePc={setScorePc} />}
 
       {appStep === 3

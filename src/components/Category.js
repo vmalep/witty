@@ -1,32 +1,52 @@
+ import {useState} from "react";
+ import { TriviaAPI } from "../utils/TriviaAPI";
+ 
  const Category = (props) => {
-    const {userName, selectedAvatar, appStep, setAppStep} = props
-    const categories = ["History", "Sport","Art","Music"]
+    const {userName, selectedAvatar, setAppStep, selectedCategory, setSelectedCategory} = props
     const level = ["Easy","Medium","Hard"]
 
+
+
     const handleClick = () => {
-        setAppStep(appStep + 1)
+        setAppStep(2)
     }
+
+    const handleCategory = (element) => {
+        setSelectedCategory(element.catNb);
+        setAppStep(2)
+    }
+    
 
      return (
             <>
-            <h2>Select your Category</h2>
-            <div className = "level">
-                {level.map((element,index) => {
-                    return(
-                        <button key={index}>{element}</button>
-                    )
+                <div className="current-player">
+                    <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
+                    <p className="current-player-name">{userName}</p>
+                </div>
+                
+                <h2>Select your Difficulty</h2>
+                <div className = "level">
+                    {level.map((element,index) => {
+                        return(
+                            <button key={index}>{element}</button>
+                        )
                     })}
-            </div>
-    
-              <div className="usernamebox">
-                  {categories.map((element , index) => {
-                      return(
-                          <button key={index}>{element}</button>
-                      )
-                  })}
-                  </div>
-                  <button className="button"
-                onClick={handleClick}>NEXT</button>
+                </div>
+                <h2>Select your Category</h2>
+                <div className="usernamebox">
+                    {TriviaAPI.map((element , index) => {
+                        return(
+                            <button
+                                    key={index}
+                                    onClick={() => handleCategory(element)} 
+                                    style={{backgroundColor: element.color}}
+                            >{element.catName}</button>   
+                        )
+                    })}
+                          
+                </div>
+                <button className="button"
+                    onClick={handleClick}>NEXT</button>
            </>
         )
     }
