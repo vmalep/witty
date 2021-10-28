@@ -41,17 +41,17 @@ function QuizSection(props) {
 
     console.log("quizList: ", quizList)
 
-    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+/*     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
         }
-        setQuestCount(questCount + 1)
+        
+        // If we have reached the last question, we move to the step 3 (Score section)
         if(quizList[questCount].questNum >= quizList.length){
             setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
             setAppStep(3)
-        }
-            
-    }
+        } else setQuestCount(questCount + 1) // otherwise, we move to the next question
+    } */
 
     return (
         <>
@@ -62,7 +62,16 @@ function QuizSection(props) {
                     .map((element, index) => {
                         console.log(element)
                         return (
-                            <QuizCard key={element.questNum} quizQuestion={element} checkAnswer={checkAnswer} score={score} />
+                            <QuizCard
+                                key={element.questNum}
+                                questCount={questCount} 
+                                quizList={quizList} 
+                                quizQuestion={element} 
+                                score={score} 
+                                setScore={setScore}
+                                setQuestCount={setQuestCount}
+                                setScorePc={setScorePc}
+                                setAppStep={setAppStep} />
                         )
                     })
             }

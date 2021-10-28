@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const ScoreSection = (props) => {
   const { setAppStep, userName, scorePc } = props
 
