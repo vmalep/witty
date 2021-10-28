@@ -12,8 +12,8 @@
     }
 
     const handleCategory = (element) => {
-        console.log(element.catNb)
         setSelectedCategory(element.catNb);
+        setAppStep(2)
     }
     
 
@@ -39,7 +39,7 @@
                             <button
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    color={element.color}
+                                    style={{backgroundColor: element.color}}
                             >{element.catName}</button>   
                         )
                     })}
