@@ -6,28 +6,28 @@ import QuizGenerator from '../utils/QuizGenerator'
 function QuizSection(props) {
     const {setAppStep, selectedCategory, setScorePc} = props
 
+    // To be improved with a single userSession Object or context feature
     const [apiData, setApiData] = useState([])
     const [dataLoaded, setDataLoaded] = useState(false)
     const [quizList, setQuizList] = useState([])
     const [questCount, setQuestCount] = useState(0)
     const [score, setScore] = useState(0)
 
+    // To be adapted once those options will be available in the previous step
     const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
     const amountParam = '?amount=10'
     const typeParam = '&type=multiple' //questType ? `&type=${questType}`: ''
     /* const difficultyParam = props.difficulty ? `&difficulty=${props.difficulty}` : '' */
 
+    // 2BDone: The axios part should be moved to the QuizGenerator function, but not working for the moment. To be done next week.
     const baseUrl = "https://opentdb.com/api.php"
 
-    /* const [quizURL, setQuizURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple") */
-    
     const quizURL = `${baseUrl}${amountParam}${catParam}${typeParam}`
     console.log("quizURL: " + quizURL)
 
     useEffect(() => {
         console.log("useEffect axios")
         axios.get(quizURL)
-          /* .then(res => res.data.results.map((question, i) => ({...question, idNum: i + 1}))) */
           .then(res => setApiData(res.data.results))
           .then(setDataLoaded(true))
           .catch(err => console.log(err))
@@ -40,18 +40,6 @@ function QuizSection(props) {
     }, [apiData])
 
     console.log("quizList: ", quizList)
-
-/*     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        if (response === quizList[questCount].correct_answer) {
-            setScore(score + 1)
-        }
-        
-        // If we have reached the last question, we move to the step 3 (Score section)
-        if(quizList[questCount].questNum >= quizList.length){
-            setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
-            setAppStep(3)
-        } else setQuestCount(questCount + 1) // otherwise, we move to the next question
-    } */
 
     return (
         <>
