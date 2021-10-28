@@ -4,33 +4,28 @@ import QuizCard from './QuizCard'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection(props) {
-    const {appStep, setAppStep, selectedCat, setScorePc} = props
+    const {setAppStep, selectedCategory, setScorePc} = props
 
     const [apiData, setApiData] = useState([])
+    const [dataLoaded, setDataLoaded] = useState(false)
     const [quizList, setQuizList] = useState([])
+    const [questCount, setQuestCount] = useState(0)
+    const [score, setScore] = useState(0)
 
-    const [quizCat, setQuizCat] = useState([
-        {
-            catName: "History",
-            catNb: "23"
-        }
-    ])
+    const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
+    const amountParam = '?amount=10'
+    const typeParam = '&type=multiple' //questType ? `&type=${questType}`: ''
+    /* const difficultyParam = props.difficulty ? `&difficulty=${props.difficulty}` : '' */
 
     const baseUrl = "https://opentdb.com/api.php"
 
-    const [quizURL, setQuizURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple")
-    const [dataLoaded, setDataLoaded] = useState(false)
-    const [questCount, setQuestCount] = useState(0) // Keep track of the index number of the current question
-    const [score, setScore] = useState(0) // Keep track of the right answers
-
-    /* const [quizQuestNb, setQuizQuestNb] = useState("10")
-    const [quizQuestType, setQuizQuestType] = useState(["multiple", "boolean"])
+    /* const [quizURL, setQuizURL] = useState("https://opentdb.com/api.php?amount=10&category=23&type=multiple") */
+    
+    const quizURL = `${baseUrl}${amountParam}${catParam}${typeParam}`
+    console.log("quizURL: " + quizURL)
 
     useEffect(() => {
-        setQuizURL(`${baseUrl}?amount=${quizQuestNb}&category=${quizCat[0].catNb}&type=${quizQuestType[0]}`)
-    }, [quizQuestNb, quizQuestType, quizCat]) */
-
-    useEffect(() => {
+        console.log("useEffect axios")
         axios.get(quizURL)
           /* .then(res => res.data.results.map((question, i) => ({...question, idNum: i + 1}))) */
           .then(res => setApiData(res.data.results))
