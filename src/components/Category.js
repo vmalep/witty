@@ -20,8 +20,8 @@
      return (
             <>
                 <div className="current-player">
-                    <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
                     <p className="current-player-name">{userName}</p>
+                    <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
                 </div>
                 
                 <h2>Select your Difficulty</h2>

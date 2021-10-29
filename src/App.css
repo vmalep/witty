@@ -1,19 +1,25 @@
 body {
   width: clamp(360px, 100%, 700px);
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0em auto;
   text-align: center;
+
+}
+
+.App {
+  background-color: rgb(255, 239, 159);
 }
 
 .header {
-  background-color: rgb(255, 136, 0);
+  background-color: rgb(243, 17, 73 );
   height: 150px;
+  margin-top: -3em;
 }
 
 h1 {
   text-align: center;
   line-height: 150px;
-  color: whitesmoke;
+  color: white;
   font-size: 50px;
 }
 
@@ -31,31 +37,23 @@ h2 {
 .avatar {
   width: 100px;
   height: 100;
-  padding: 30px;
+  padding: 10px;
   border: none;
   border-radius: 80px;
   margin: 8px;
-  background-color: rgb(201, 241, 125);
+  background-color: rgb(224, 117, 158);
 }
 
 .avatar-on {
   width: 100px;
   height: 100;
-  padding: 30px;
+  padding: 10px;
   border: none;
   border-radius: 80px;
   margin: 8px;
-  background-color: rgb(110, 146, 43);
+  background-color: rgb(243, 17, 73 );
 }
 
-/*
-.input-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-}
-*/
 
 form {
   display: flex;
@@ -78,9 +76,9 @@ form {
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: whitesmoke;
+  color: rgb(248, 246, 246);
   text-align: center;
-  background-color: rgb(11, 11, 194);
+  background-color: rgb(243, 17, 73 );
   width: 185px;
   padding: 18px;
   margin: 20px;
@@ -94,7 +92,7 @@ button {
   font-weight: bold;
   color: whitesmoke;
   text-align: center;
-  background-color: rgb(11, 11, 194);
+  background-color: rgb(243, 17, 73 );
   width: 185px;
   padding: 18px;
   margin: 20px;
@@ -104,31 +102,34 @@ button {
 .current-player {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .current-player-name {
-  color:rgb(110, 146, 43);
-  font-size: 25px;
-  font-weight: bold;
-  padding: 5px;
+  color:rgb(15, 15, 15);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold; 
+  padding: 10px;
 }
 
 .current-player-avatar {
-  width: 70px;
-  height: 70;
-  padding: 10px;
+  width: 60px;
+  height: 60;
+  padding: 15px;
   border: none;
   border-radius: 80px;
-  background-color: rgb(110, 146, 43);
+  background-color: rgb(243, 17, 73);
 }
 
-
-.categorybox {
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 40px;
+ 
+h3 {
+  margin: 20px;
+  font-size: 40px;
+  color: rgb(7, 7, 6);
 }
+    
 
 
 

@@ -7,7 +7,7 @@ export const TriviaAPI = [
     {  
         catName: "Sport",
         catNb: "21",
-        color: "cian"
+        color: "blue"
     },
     {
         catName:"Art",
@@ -17,7 +17,7 @@ export const TriviaAPI = [
     {
         catName:"Music",
         catNb:"12",
-        color:"magenta"
+        color:"orange"
     }
 ]
  
