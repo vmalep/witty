@@ -16,11 +16,11 @@ const QuizCard = (props) => {
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
     
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        console.log(nextBtnDisabled)
+        /* console.log(nextBtnDisabled) */
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
         }
-        console.log("reponse", response)
+        /* console.log("reponse", response) */
         setNextBtnDisabled(false, "blue")
     }
     
@@ -40,7 +40,7 @@ const QuizCard = (props) => {
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
             <div>
                 {quizQuestion.possible_answers.map((element, index) => {
-                    console.log(quizQuestion.correct_answer + "-" + element)
+                    /* console.log(quizQuestion.correct_answer + "-" + element) */
                     return (
                         <button
                             key={index}

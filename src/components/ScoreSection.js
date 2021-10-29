@@ -14,7 +14,7 @@ const ScoreSection = (props) => {
             // code block
         } */
   const handleClick = () => {
-    setAppStep(0)
+    setAppStep(1)
   }
   return (
     <>

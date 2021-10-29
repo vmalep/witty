@@ -23,7 +23,7 @@ function QuizSection(props) {
     const baseUrl = "https://opentdb.com/api.php"
 
     const quizURL = `${baseUrl}${amountParam}${catParam}${typeParam}`
-    console.log("quizURL: " + quizURL)
+    /* console.log("quizURL: " + quizURL) */
 
     useEffect(() => {
         console.log("useEffect axios")
@@ -39,7 +39,7 @@ function QuizSection(props) {
         }
     }, [apiData])
 
-    console.log("quizList: ", quizList)
+    /* console.log("quizList: ", quizList) */
 
     return (
         <>
@@ -48,7 +48,7 @@ function QuizSection(props) {
                 quizList
                     .filter((element) => quizList.indexOf(element) === questCount)
                     .map((element, index) => {
-                        console.log(element)
+                        /* console.log(element) */
                         return (
                             <QuizCard
                                 key={element.questNum}
