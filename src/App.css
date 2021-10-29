@@ -8,6 +8,7 @@ body {
 
 .App {
   background-color: rgb(255, 239, 159);
+  margin-bottom: -3em;
 }
 
 .header {
