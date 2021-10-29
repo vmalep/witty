@@ -3,6 +3,7 @@
 .quiz-card{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .quiz-card p{
