@@ -132,22 +132,35 @@ h3 {
 }
     
 
-
-
-/* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.
-We can for example add a color property inside the category state and use it for the color of the category button */
-/* .categorybox1 {
-  border: 2px solid blue ;
+.quiz-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.categorybox2 {
-  border: 2px solid yellow ;
+.quiz-card p{
+  margin:1rem;
+  color: rgb(8, 8, 8);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.categorybox3 {
-  border: 2px solid green ;
+.quiz-card div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.categorybox4 {
-  border: 2px solid purple ;
-} */
+.right-answer-btn{
+  background-color: green;
+}
+
+.wrong-answer-btn{
+  background-color: red;
+}
+
+.button-exit{
+  background-color: rgb(13, 13, 221);
+}
+
+ 

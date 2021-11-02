@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Category from './Category'
-import './QuizCard.css'
-
+ 
 const QuizCard = (props) => {
     const {
         quizQuestion, 
@@ -65,21 +64,22 @@ const QuizCard = (props) => {
                     )
                 })}
             </div>
-
-            <button className="button-exit" 
-            onClick={handleExit}
-            >
-                EXIT
-            </button>
-            
-            <button
+      <div>
+            <button 
                 onClick={handleNext}
                 disabled={nextBtnDisabled[0]}
                 style={{backgroundColor: nextBtnDisabled[1]}}
             >
                 Next question
             </button>
-        </div>
+
+            <button className="button-exit" 
+            onClick={handleExit}
+            >
+                EXIT
+            </button>
+            </div>
+      </div>
     )
 }
 
