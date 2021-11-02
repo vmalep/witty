@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header"
 import Avatar from "./components/Avatar"
 import UserName from "./components/UserName"
-import Category from "./components/Category"
+import Options from "./components/Options"
 import QuizSection from './components/QuizSection'
 import ScoreSection from './components/ScoreSection'
 
@@ -15,6 +15,7 @@ function App() {
   const [userName, setUserName] = useState(null);
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
+  const [selectedDifficulty, setSelectedDifficulty] = useState("");
   const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
   // 2BFixed: we should create a State that is an object and can receive all the shared parameters (userName, avatar, options choosen, score, etc.)
 
@@ -30,12 +31,15 @@ function App() {
       }
 
       {appStep === 1 
-      && <Category 
+      && <Options 
           userName={userName} 
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
-          setAppStep={setAppStep}         
+          setAppStep={setAppStep} 
+          selectedCategory={selectedCategory}        
           setSelectedCategory={setSelectedCategory}
+          selectedDifficulty={selectedDifficulty}
+          setSelectedDifficulty={setSelectedDifficulty}
         /> 
       }
 
