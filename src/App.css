@@ -130,8 +130,18 @@ h3 {
   font-size: 40px;
   color: rgb(7, 7, 6);
 }
-    
 
+.difficulty-off {
+  background-color: rgb(224, 117, 158);
+  border-radius: 150px;
+  width: 150px;
+}
+    
+.difficulty-on {
+  background-color: rgb(243, 17, 73);
+  border-radius: 150px;
+  width: 150px;
+}
 
 
 /* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.

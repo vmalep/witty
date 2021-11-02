@@ -18,7 +18,7 @@
                             <button
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    style={{backgroundColor: element.color}}      
+                                    style={{backgroundColor: element.color}}     
                             >{element.catName}</button>   
                         )
                     })}         

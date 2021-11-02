@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const Difficulty = (props) => {
-    const {setSelectedDifficulty} = props;
+    const {selectedDifficulty, setSelectedDifficulty} = props;
     
     const levels = ["Easy","Medium","Hard"]
     return (
@@ -13,6 +13,7 @@ const Difficulty = (props) => {
                            <button 
                            key={index}
                            onClick={() => setSelectedDifficulty(element)}
+                           className={selectedDifficulty === element ? "difficulty-on" : "difficulty-off"}
                            >{element}</button>
                        )
                    })}
