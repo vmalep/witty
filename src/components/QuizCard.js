@@ -36,7 +36,6 @@ const QuizCard = (props) => {
 
     /* Exit BUTTON*/
 
-    const [exitButton, setExitButton] = useState([true, 'blue'])
 
     const handleExit = () => {
         setAppStep(1)
