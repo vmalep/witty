@@ -66,7 +66,7 @@ const QuizCard = (props) => {
                 })}
             </div>
 
-            <button className="button" 
+            <button className="button-exit" 
             onClick={handleExit}
             >
                 EXIT
