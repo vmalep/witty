@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import Header from "./components/Header"
+import Options from "./components/Options"
 import UserInit from "./components/UserInit"
 import Category from "./components/Category"
 import QuizSection from './components/QuizSection'
@@ -14,6 +15,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
+  const [selectedDifficulty, setSelectedDifficulty] = useState("");
   const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
 
   return (
@@ -30,12 +32,15 @@ function App() {
       }
 
       {appStep === 1 
-      && <Category 
+      && <Options 
           userName={userName} 
           selectedAvatar={selectedAvatar} 
           appStep={appStep} 
-          setAppStep={setAppStep}         
+          setAppStep={setAppStep} 
+          selectedCategory={selectedCategory}        
           setSelectedCategory={setSelectedCategory}
+          selectedDifficulty={selectedDifficulty}
+          setSelectedDifficulty={setSelectedDifficulty}
         /> 
       }
 

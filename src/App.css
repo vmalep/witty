@@ -55,14 +55,6 @@ h2 {
   background-color: rgb(243, 17, 73 );
 }
 
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-}
-
 .nickname {
   width: 300px;
   height: 45px;
@@ -130,28 +122,20 @@ h3 {
   font-size: 40px;
   color: rgb(7, 7, 6);
 }
+
+.difficulty-off {
+  background-color: rgb(224, 117, 158);
+  border-radius: 150px;
+  width: 150px;
+}
+    
+.difficulty-on {
+  background-color: rgb(243, 17, 73);
+  border-radius: 150px;
+  width: 150px;
     
 .flex-column{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-/* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.
-We can for example add a color property inside the category state and use it for the color of the category button */
-/* .categorybox1 {
-  border: 2px solid blue ;
-}
-
-.categorybox2 {
-  border: 2px solid yellow ;
-}
-
-.categorybox3 {
-  border: 2px solid green ;
-}
-
-.categorybox4 {
-  border: 2px solid purple ;
-} */
