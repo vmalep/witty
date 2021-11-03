@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react"
-import App from "../App"
 import Avatar from "./Avatar"
 import NickName from "./NickName"
 
