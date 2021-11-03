@@ -3,7 +3,6 @@ import { useState } from "react";
 import Header from "./components/Header"
 import Options from "./components/Options"
 import UserInit from "./components/UserInit"
-import Category from "./components/Category"
 import QuizSection from './components/QuizSection'
 import ScoreSection from './components/ScoreSection'
 
