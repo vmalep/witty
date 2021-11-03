@@ -92,6 +92,11 @@ button {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.selected-btn {
+  background-color: white;
+  border: solid black 3px
+}
+
 .current-player {
   display: flex;
   flex-direction: row;
