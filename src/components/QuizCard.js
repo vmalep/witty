@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import waitingAnswer from '../images/waitingAnswer.gif'
+import wrongAnswer from '../images/wrongAnswer1.gif'
+import rightAnswer from '../images/rightAnswer1.gif'
 
 const QuizCard = (props) => {
     const {
@@ -14,17 +16,22 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
-    const [gifSource, setGifSource] = useState(waitingAnswer)
+    const [gifSource, setGifSource] = useState(waitingAnswer , rightAnswer,wrongAnswer)
      
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
-        }
+            setGifSource(rightAnswer)
+        } else setGifSource(wrongAnswer)
+        
         /* console.log("response", response) */
         setNextBtnDisabled([false])
     }
+
+
     
+
     const handleNext = () => {
         // If we have reached the last question, we move to the next step: Score section
         if(quizList[questCount].questNum >= quizList.length){
@@ -78,7 +85,7 @@ const QuizCard = (props) => {
             <button className="button-exit" 
             onClick={handleExit}
             >
-                EXIT
+                Exit
             </button>
             </div>
       </div>
