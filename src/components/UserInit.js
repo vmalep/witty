@@ -15,15 +15,11 @@ const UserInit = (props) => {
         const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
         
     // Each time selectedAvatar or userName is modified, check if both are filled and if so, activate the Next button
+    // otherwise, disable it (again)
     useEffect(() =>{
-        if((Object.keys(selectedAvatar).length !== 0) && userName) {
-            console.log("enabling the next button")
-            setNextBtnDisabled([false])
-        } else {
-            console.log("disabling the next button")
-            setNextBtnDisabled([true, 'grey'])
-        }
-
+        ((Object.keys(selectedAvatar).length !== 0) && userName)
+            ? setNextBtnDisabled([false])
+            : setNextBtnDisabled([true, 'grey'])
     }, [selectedAvatar, userName])
 
     return (
