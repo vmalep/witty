@@ -2,7 +2,7 @@
  import { TriviaAPI } from "../utils/TriviaAPI";
  
  const Category = (props) => {
-    const {setSelectedCategory, setNextBtnDisabled} = props
+    const {selectedCategory, setSelectedCategory, setNextBtnDisabled} = props
 
     const handleCategory = (element) => {
         setSelectedCategory(element.catNb);
@@ -18,7 +18,7 @@
                             <button
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    style={{backgroundColor: element.color}}     
+                                    style={{backgroundColor: selectedCategory !== element.catNb ? element.color : 'purple'}} 
                             >{element.catName}</button>   
                         )
                     })}         
@@ -28,3 +28,4 @@
     }
 
     export default Category;
+
