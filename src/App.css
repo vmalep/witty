@@ -142,6 +142,10 @@ h3 {
   justify-content: center;
 }
 
+.answers {
+  background-color: rgb(224, 117, 158);
+}
+
 .right-answer-btn{
   background-color: green;
 }
