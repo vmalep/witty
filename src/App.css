@@ -131,7 +131,11 @@ h3 {
   color: rgb(7, 7, 6);
 }
     
-
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /* Pierre: I suggest to find a way to apply conditionnal formatting according to the category.
