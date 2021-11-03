@@ -21,7 +21,7 @@ const QuizCard = (props) => {
             setScore(score + 1)
         }
         /* console.log("reponse", response) */
-        setNextBtnDisabled(false, "blue")
+        setNextBtnDisabled([false])
     }
     
     const handleNext = () => {
