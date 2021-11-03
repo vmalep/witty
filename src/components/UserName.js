@@ -1,22 +1,11 @@
-import {useRef} from "react";
+import {useState} from "react";
 
 const UserName = (props) => {
 
-    const {setUserName, appStep, setAppStep} = props
-    const inputRef = useRef();
-
-    const handleClick = () => {
-        inputRef.current.value && setUserName(inputRef.current.value)
-        setAppStep(appStep + 1)
-    }
+    const {setUserName, setAppStep} = props
 
     return (
-        <div>
-            <form onSubmit={handleClick}>
-                <input placeholder="Enter your nickname" className="nickname" ref={inputRef} required/>
-                <input className="name-input-field" type="submit" value="NEXT"/>
-            </form>
-        </div>
+        <input placeholder="Enter your nickname" className="nickname" onChange={e => setUserName(e.target.value)} />
     )
 }
 
