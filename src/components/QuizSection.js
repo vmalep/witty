@@ -26,7 +26,6 @@ function QuizSection(props) {
     /* console.log("quizURL: " + quizURL) */
 
     useEffect(() => {
-        console.log("useEffect axios")
         axios.get(quizURL)
           .then(res => setApiData(res.data.results))
           .then(setDataLoaded(true))
