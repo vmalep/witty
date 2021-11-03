@@ -156,14 +156,16 @@ h3 {
 
 .difficulty-off {
   background-color: rgb(224, 117, 158);
-  border-radius: 150px;
-  width: 150px;
+  border-radius: 100px;
+  width: 100px;
+  margin: 5px;
 }
     
 .difficulty-on {
   background-color: rgb(243, 17, 73);
-  border-radius: 150px;
-  width: 150px;
+  border-radius: 100px;
+  width: 100px;
+  margin: 5px;
 }
     
 .flex-column{
