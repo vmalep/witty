@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import './QuizCard.css'
-
+import Category from './Category'
+ 
 const QuizCard = (props) => {
     const {
         quizQuestion, 
@@ -14,7 +14,7 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
-    
+     
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
         if (response === quizList[questCount].correct_answer) {
@@ -32,6 +32,13 @@ const QuizCard = (props) => {
         } else {
             setQuestCount(questCount + 1) // Otherwise, we move to the next question     
         }
+    }
+
+    /* Exit BUTTON*/
+
+
+    const handleExit = () => {
+        setAppStep(1)
     }
     
     return (
@@ -56,14 +63,22 @@ const QuizCard = (props) => {
                     )
                 })}
             </div>
-            <button
+      <div>
+            <button 
                 onClick={handleNext}
                 disabled={nextBtnDisabled[0]}
                 style={{backgroundColor: nextBtnDisabled[1]}}
             >
                 Next question
             </button>
-        </div>
+
+            <button className="button-exit" 
+            onClick={handleExit}
+            >
+                EXIT
+            </button>
+            </div>
+      </div>
     )
 }
 
