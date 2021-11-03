@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Category from './Category'
  
 const QuizCard = (props) => {
     const {
@@ -14,13 +13,14 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
+    const [gifSource, setGifSource] = useState("waitinganswer.gif")
      
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
         }
-        /* console.log("reponse", response) */
+        /* console.log("response", response) */
         setNextBtnDisabled([false])
     }
     
@@ -43,6 +43,7 @@ const QuizCard = (props) => {
     
     return (
         <div className="quiz-card">
+            <img src={gifSource} tag="gif" />
             <p>score: {score}</p>
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
             <div>
