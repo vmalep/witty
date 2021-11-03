@@ -142,6 +142,10 @@ h3 {
   justify-content: center;
 }
 
+.quiz-card img{
+  margin:1rem;
+}
+
 .right-answer-btn{
   background-color: green;
 }
@@ -151,7 +155,7 @@ h3 {
 }
 
 .button-exit{
-  background-color: rgb(13, 13, 221);
+  background-color: rgb(73, 4, 56);
 }
 
 .difficulty-off {

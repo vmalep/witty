@@ -1,5 +1,6 @@
 import { useState } from 'react'
- 
+import waitingAnswer from '../images/waitingAnswer.gif'
+
 const QuizCard = (props) => {
     const {
         quizQuestion, 
@@ -13,7 +14,7 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
-    const [gifSource, setGifSource] = useState("waitinganswer.gif")
+    const [gifSource, setGifSource] = useState(waitingAnswer)
      
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
@@ -40,10 +41,11 @@ const QuizCard = (props) => {
     const handleExit = () => {
         setAppStep(1)
     }
+
     
     return (
         <div className="quiz-card">
-            <img src={gifSource} tag="gif" />
+            <img src= {gifSource} resizeMode="cover" height="200px" tag="Loading..."/>
             <p>score: {score}</p>
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
             <div>
