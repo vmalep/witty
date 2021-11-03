@@ -16,21 +16,15 @@
                 <div className="usernamebox">
                     {TriviaAPI.map((element , index) => {
 
-                        console.log("element.color" + colorConvert.keyword.hsl(element.color))
-                        const fadedColor=[
-                            colorConvert.keyword.hsl(element.color)[0],
-                            colorConvert.keyword.hsl(element.color)[1],
-                            "50%"
-                        ]
-                        console.log("fadedColor" + fadedColor)
+                        const primaryH = colorConvert.keyword.hsl(element.color)[0]
 
                         return(
                             <button
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    style={{backgroundColor: selectedCategory !== element.catNb 
-                                        ? element.color 
-                                        : `hsl(${fadedColor})`
+                                    style={{backgroundColor: selectedCategory === element.catNb 
+                                        ? `hsl(${primaryH}, 80%, 62%)` 
+                                        : `hsl(${primaryH}, 72%, 50%)` 
                                         }} 
                             >{element.catName}</button>   
                         )
