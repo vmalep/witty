@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import waitingAnswer from '../images/waitingAnswer.gif'
-import wrongAnswer from '../images/wrongAnswer1.gif'
-import rightAnswer from '../images/rightAnswer1.gif'
+import wrongAnswer from '../images/wrongAnswer3.gif'
+import rightAnswer from '../images/rightAnswer5.gif'
 
 const QuizCard = (props) => {
     const {
@@ -63,8 +63,8 @@ const QuizCard = (props) => {
                             key={index}
                             className={
                                 (!nextBtnDisabled[0] && (quizQuestion.correct_answer === element))
-                                ? "right-answer-btn" 
-                                : null
+                                ? "right-answer-btn" : "wrong-answer-btn"
+
                             }
                             onClick={() => checkAnswer(element)}
                         >

@@ -147,15 +147,17 @@ h3 {
 }
 
 .right-answer-btn{
-  background-color: green;
+  background-color: rgb(27, 255, 6);
 }
 
 .wrong-answer-btn{
-  background-color: red;
+  background-color: rgb(243, 103, 10);
 }
+
 
 .button-exit{
   background-color: rgb(73, 4, 56);
+
 }
 
 .difficulty-off {
