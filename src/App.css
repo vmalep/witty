@@ -22,6 +22,7 @@ h1 {
   line-height: 150px;
   color: white;
   font-size: 50px;
+  padding-top: 10px;
 }
 
 h2 {
@@ -141,22 +142,31 @@ h3 {
   font-weight: bold;
 }
 
-.quiz-card div{
+.flex-wrap{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.quiz-card img{
+  margin:1rem;
+}
+
+.answers {
+  background-color: rgb(224, 117, 158);
+}
+
 .right-answer-btn{
-  background-color: green;
+  background-color: rgb(15, 175, 0);
 }
 
 .wrong-answer-btn{
-  background-color: red;
+  background-color: rgb(243, 103, 10);
 }
 
 .button-exit{
-  background-color: rgb(13, 13, 221);
+  background-color: rgb(73, 4, 56);
+
 }
 
 .difficulty-off {
@@ -177,4 +187,10 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.flex-spacebetween{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
