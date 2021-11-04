@@ -17,10 +17,14 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
+
+    const [selectedAnswer, setSelectedAnswer] = useState();
+     
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
+        setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
             setGifSource(GetRandomGif("right"))
@@ -40,7 +44,17 @@ const QuizCard = (props) => {
         }
     }
 
+    const handleSelect = (element) => {
+        if(selectedAnswer === element && selectedAnswer === quizQuestion.correct_answer) {
+            return "right-answer-btn";
+        } else if(selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) {
+            return "wrong-answer-btn"
+        } else if(element === quizQuestion.correct_answer) {
+            return "right-answer-btn"
+        }
+    }
     /* Exit BUTTON*/
+
 /*     const handleExit = () => {
         setAppStep(1)
     } */
@@ -56,10 +70,13 @@ const QuizCard = (props) => {
                     return (
                         <button
                             key={index}
-                            className={
+                            /*className={
                                 (!nextBtnDisabled[0] && (quizQuestion.correct_answer === element))
+                                ? "right-answer-btn"
+                                : null
+                                }*/
+                            className={`answers ${selectedAnswer && handleSelect(element)}`}
                                 ? "right-answer-btn" : "wrong-answer-btn"
-
                             }
                             onClick={() => checkAnswer(element)}
                         >
@@ -85,6 +102,7 @@ const QuizCard = (props) => {
             </div>
       </div>
     )
-}
+    }
 
-export default QuizCard
+
+export default QuizCard;

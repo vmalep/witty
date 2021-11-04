@@ -146,6 +146,10 @@ h3 {
   margin:1rem;
 }
 
+.answers {
+  background-color: rgb(224, 117, 158);
+}
+
 .right-answer-btn{
   background-color: rgb(27, 255, 6);
 }
@@ -173,7 +177,7 @@ h3 {
   width: 100px;
   margin: 5px;
 }
-    
+  
 .flex-column{
   display: flex;
   flex-direction: column;

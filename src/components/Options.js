@@ -25,6 +25,7 @@ const Options = (props) => {
                 setSelectedDifficulty={setSelectedDifficulty}
                />
                <Category
+                selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory} 
                 setNextBtnDisabled={setNextBtnDisabled}
                 />
