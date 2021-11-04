@@ -1,188 +1,111 @@
+
+.App {
+  background-color: var(--color-background);
+  margin-bottom: -3em;
+} 
+
+/* CSS Variables */
+
+html{
+  --hsl-base-color: 200;
+  --hsl-s: 100%;
+  --hsl-l: 35%;
+
+  --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
+  --color-secondary: hsl(var(--hsl-base-color), 60%, 70%);
+  --color-background: hsl(var(--hsl-base-color), 100%, 90%);
+  --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
+  --white-color: hsl(0, 0%, 96.1%);
+  --black-color: hsl(0, 0%, 6%);
+  --disabled-color: hsl(0, 0%, 50.2%);
+  --right-color: hsl(115, var(--hsl-s), var(--hsl-l));
+  --wrong-color: hsl(23, var(--hsl-s), var(--hsl-l));
+  --exit-color: hsl(315, var(--hsl-s), var(--hsl-l));
+}
+
+/* Main HTML element selectors */
+
+header {
+  background-color: var(--color-primary);
+  height: 150px;
+  margin-top: -3em;
+}
+
 body {
   width: clamp(360px, 100%, 700px);
   box-sizing: border-box;
   margin: 0em auto;
   text-align: center;
-
-}
-
-.App {
-  background-color: rgb(255, 239, 159);
-  margin-bottom: -3em;
-}
-
-.header {
-  background-color: rgb(243, 17, 73 );
-  height: 150px;
-  margin-top: -3em;
-}
+  
+}  
 
 h1 {
   text-align: center;
   line-height: 150px;
-  color: white;
+  color: var(--white-color);
   font-size: 50px;
   padding-top: 10px;
-}
+}    
 
 h2 {
   padding: 10px;
   margin: 20px;
-}
+}    
 
-.avatarbox {
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-  
-.avatar {
-  width: 100px;
-  height: 100;
-  padding: 10px;
-  border: none;
-  border-radius: 80px;
-  margin: 8px;
-  background-color: rgb(224, 117, 158);
-}
-
-.avatar-on {
-  width: 100px;
-  height: 100;
-  padding: 10px;
-  border: none;
-  border-radius: 80px;
-  margin: 8px;
-  background-color: rgb(243, 17, 73 );
-}
-
-.nickname {
-  width: 300px;
-  height: 45px;
-  font-size: 20px;
-  border-radius: 10px;
-  padding-left: 10px;
-  margin: 5px;
-}
-
-.name-input-field {
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(248, 246, 246);
-  text-align: center;
-  background-color: rgb(243, 17, 73 );
-  width: 185px;
-  padding: 18px;
+h3 {
   margin: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 40px;
+  color: var(--black-color);
 }
+
+/* Button definitions */
 
 button {
   border: none;
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: whitesmoke;
+  color: var(--white-color);
   text-align: center;
-  background-color: rgb(243, 17, 73 );
+  background-color: var(--color-primary);
   width: 145px;
   padding: 15px;
   margin: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--box-shadow);
+}    
+
+.action-btn{
+  background-color: var(--color-primary);
 }
 
-.selected-btn {
-  background-color: white;
-  border: solid black 3px
+.disabled-btn{
+  background-color: var(--disabled-color);
 }
 
-.current-player {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 10px;
+.answers-btn {
+  background-color: var(--color-secondary);
 }
 
-.current-player-name {
-  color:rgb(15, 15, 15);
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: bold; 
-  padding: 10px;
+.right-answer-btn{
+  background-color: var(--right-color);
 }
 
-.current-player-avatar {
-  width: 60px;
-  height: 60;
-  padding: 15px;
-  border: none;
-  border-radius: 80px;
-  background-color: rgb(243, 17, 73);
+.wrong-answer-btn{
+  background-color: var(--wrong-color);
 }
 
+.exit-btn{
+  background-color: var(--color-primary);
+}
+
+/* Flex classes */
  
-h3 {
-  margin: 20px;
-  font-size: 40px;
-  color: rgb(7, 7, 6);
-} 
-
-.quiz-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.quiz-card p{
-  margin:1rem;
-  color: rgb(8, 8, 8);
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 .flex-wrap{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.quiz-card img{
-  margin:1rem;
-}
-
-.answers {
-  background-color: rgb(224, 117, 158);
-}
-
-.right-answer-btn{
-  background-color: rgb(15, 175, 0);
-}
-
-.wrong-answer-btn{
-  background-color: rgb(243, 103, 10);
-}
-
-.button-exit{
-  background-color: rgb(73, 4, 56);
-
-}
-
-.difficulty-off {
-  background-color: rgb(224, 117, 158);
-  border-radius: 100px;
-  width: 100px;
-  margin: 5px;
-}
-    
-.difficulty-on {
-  background-color: rgb(243, 17, 73);
-  border-radius: 100px;
-  width: 100px;
-  margin: 5px;
-}
-  
 .flex-column{
   display: flex;
   flex-direction: column;
@@ -194,3 +117,118 @@ h3 {
   justify-content: space-between;
   width: 80%;
 }
+
+/* Avatar classes */
+
+.avatarbox {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 40px;
+}    
+  
+.avatar {
+  width: 100px;
+  height: 100;
+  padding: 10px;
+  border: none;
+  border-radius: 80px;
+  margin: 8px;
+  background-color: var(--color-secondary);
+}    
+
+.avatar-on {
+  width: 100px;
+  height: 100;
+  padding: 10px;
+  border: none;
+  border-radius: 80px;
+  margin: 8px;
+  background-color: var(--color-primary);
+}
+
+/* Nickname classes */
+
+.nickname {
+  width: 300px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 5px;
+}    
+
+.name-input-field {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white-color);
+  text-align: center;
+  background-color: var(--color-primary);
+  width: 185px;
+  padding: 18px;
+  margin: 20px;
+  box-shadow: var(--box-shadow);
+}    
+
+
+.selected-btn {
+  background-color: white;
+  border: solid black 3px
+}
+
+.current-player {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}    
+
+.current-player-name {
+  color:var(--black-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold; 
+  padding: 10px;
+}    
+
+.current-player-avatar {
+  width: 60px;
+  height: 60;
+  padding: 15px;
+  border: none;
+  border-radius: 80px;
+  background-color: var(--color-primary);
+}  
+
+.quiz-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}  
+
+.quiz-card p{
+  margin:1rem;
+  color: var(--black-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}  
+
+.quiz-card img{
+  margin:1rem;
+}
+
+.difficulty-off {
+  background-color: var(--color-secondary);
+  border-radius: 100px;
+  width: 100px;
+  margin: 5px;
+}
+    
+.difficulty-on {
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  width: 100px;
+  margin: 5px;
+}
+  

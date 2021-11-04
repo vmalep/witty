@@ -11,14 +11,14 @@ const UserInit = (props) => {
         setUserName, 
         setAppStep} = props
         
-        const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
+        const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
         
     // Each time selectedAvatar or userName is modified, check if both are filled and if so, activate the Next button
     // otherwise, disable it (again)
     useEffect(() =>{
         ((Object.keys(selectedAvatar).length !== 0) && userName)
-            ? setNextBtnDisabled([false])
-            : setNextBtnDisabled([true, 'grey'])
+            ? setNextBtnDisabled(false)
+            : setNextBtnDisabled(true)
     }, [selectedAvatar, userName])
 
     return (
@@ -27,8 +27,8 @@ const UserInit = (props) => {
             <NickName setUserName={setUserName} />
             <button
                 onClick={() => setAppStep(1)}
-                disabled={nextBtnDisabled[0]}
-                style={{backgroundColor: nextBtnDisabled[1]}}
+                disabled={nextBtnDisabled}
+                className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
             >
                 Next
             </button>

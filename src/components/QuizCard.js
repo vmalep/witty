@@ -13,7 +13,7 @@ const QuizCard = (props) => {
         setAppStep
     } = props
 
-    const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
+    const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
     const [selectedAnswer, setSelectedAnswer] = useState();
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
 
@@ -24,7 +24,7 @@ const QuizCard = (props) => {
             setGifSource(GetRandomGif("right"))
         } else setGifSource(GetRandomGif("wrong"))
 
-        setNextBtnDisabled([false])
+        setNextBtnDisabled(false)
     }
 
     const handleNext = () => {
@@ -60,12 +60,7 @@ const QuizCard = (props) => {
                     return (
                         <button
                             key={index}
-                            /*className={
-                                (!nextBtnDisabled[0] && (quizQuestion.correct_answer === element))
-                                ? "right-answer-btn"
-                                : null
-                                }*/
-                            className={`answers ${selectedAnswer && handleSelect(element)}`}
+                            className={`answers-btn ${selectedAnswer && handleSelect(element)}`}
                             onClick={() => checkAnswer(element)}
                         >
                             {element}
@@ -77,12 +72,12 @@ const QuizCard = (props) => {
                 <button
                     onClick={handleNext}
                     disabled={nextBtnDisabled[0]}
-                    style={{ backgroundColor: nextBtnDisabled[1] }}
+                    className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
                 >
-                    Next question
+                    Next
                 </button>
 
-                <button className="button-exit"
+                <button className="exit-btn"
                     onClick={() => setAppStep(1)}
                 >
                     Exit
