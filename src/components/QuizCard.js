@@ -61,7 +61,7 @@ const QuizCard = (props) => {
 
     return (
         <div className="quiz-card">
-            <img src={gifSource.src} resizemode="cover" height="200px" tag="Loading..." />
+            <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
             <p>score: {score}</p>
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
             <div>
