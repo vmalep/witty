@@ -212,11 +212,39 @@ function GetRandomGif(category) {
         {
             gifName: "waitingAnswer3",
             category: 'waiting',
-            src: "https://i0.wp.com/i.giphy.com/media/g04CIWFbVbRA6EEzWP/giphy.gif"
+            src: "https://1.bp.blogspot.com/-Z5bVLbk1S4E/YBAHtvw1L8I/AAAAAAAADu0/FISEO_pE2v0uat3jaCsGqnrU8OTYpJvgACLcBGAsYHQ/s281/waiting%2Bgif2.gif"
         },
+        {
+            gifName: "waitingAnswer4",
+            category: 'waiting',
+            src: "https://24.media.tumblr.com/6e24ba11246bcf18b2c0dfb61226060d/tumblr_mqx9t4UUy71ran7b9o1_500.gif"
+        },
+
+        {
+            gifName: "waitingAnswer5",
+            category: 'waiting',
+            src: "https://c.tenor.com/_YhNCtLj-O0AAAAM/grandma-84years.gif"
+        },
+        {
+            gifName: "waitingAnswer6",
+            category: 'waiting',
+            src: "https://thumbs.gfycat.com/AccurateUnitedCowrie-max-1mb.gif"
+        },
+        {
+            gifName: "waitingAnswer7",
+            category: 'waiting',
+            src: "https://media1.giphy.com/media/3o7TKTDn976rzVgky4/200.gif"
+        },
+        {
+            gifName: "waitingAnswer8",
+            category: 'waiting',
+            src: " https://i.pinimg.com/originals/b2/28/13/b228138ca189b63989d295492e8a8b16.gif"
+        },
+       
+         
     ]
 
-    const catGif = category.lenght !== "" // if a category has been specified
+    const catGif = category.length !== "" // if a category has been specified
         ? gifList.filter(element => element.category === category) // filter on it
         : gifList // or just give the full list of gif
 
