@@ -6,10 +6,10 @@ import GetRandomGif from '../utils/GetRandomGif'
 
 const QuizCard = (props) => {
     const {
-        quizQuestion, 
-        questCount, 
-        quizList, 
-        score, 
+        quizQuestion,
+        questCount,
+        quizList,
+        score,
         setScore,
         setQuestCount,
         setScorePc,
@@ -19,9 +19,9 @@ const QuizCard = (props) => {
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
 
     const [selectedAnswer, setSelectedAnswer] = useState();
-     
+
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
-    
+
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         /* console.log(nextBtnDisabled) */
         setSelectedAnswer(response);
@@ -29,14 +29,14 @@ const QuizCard = (props) => {
             setScore(score + 1)
             setGifSource(GetRandomGif("right"))
         } else setGifSource(GetRandomGif("wrong"))
-        
+
         /* console.log("response", response) */
         setNextBtnDisabled([false])
     }
 
     const handleNext = () => {
         // If we have reached the last question, we move to the next step: Score section
-        if(quizList[questCount].questNum >= quizList.length){
+        if (quizList[questCount].questNum >= quizList.length) {
             setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
             setAppStep(3)
         } else {
@@ -45,19 +45,19 @@ const QuizCard = (props) => {
     }
 
     const handleSelect = (element) => {
-        if(selectedAnswer === element && selectedAnswer === quizQuestion.correct_answer) {
+        if (selectedAnswer === element && selectedAnswer === quizQuestion.correct_answer) {
             return "right-answer-btn";
-        } else if(selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) {
+        } else if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) {
             return "wrong-answer-btn"
-        } else if(element === quizQuestion.correct_answer) {
+        } else if (element === quizQuestion.correct_answer) {
             return "right-answer-btn"
         }
     }
     /* Exit BUTTON*/
 
-/*     const handleExit = () => {
-        setAppStep(1)
-    } */
+    /*     const handleExit = () => {
+            setAppStep(1)
+        } */
 
     return (
         <div className="quiz-card">
@@ -66,7 +66,6 @@ const QuizCard = (props) => {
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
             <div>
                 {quizQuestion.possible_answers.map((element, index) => {
-                    /* console.log(quizQuestion.correct_answer + "-" + element) */
                     return (
                         <button
                             key={index}
@@ -76,8 +75,6 @@ const QuizCard = (props) => {
                                 : null
                                 }*/
                             className={`answers ${selectedAnswer && handleSelect(element)}`}
-                                ? "right-answer-btn" : "wrong-answer-btn"
-                            }
                             onClick={() => checkAnswer(element)}
                         >
                             {element}
@@ -85,24 +82,24 @@ const QuizCard = (props) => {
                     )
                 })}
             </div>
-      <div>
-            <button 
-                onClick={handleNext}
-                disabled={nextBtnDisabled[0]}
-                style={{backgroundColor: nextBtnDisabled[1]}}
-            >
-                Next question
-            </button>
+            <div>
+                <button
+                    onClick={handleNext}
+                    disabled={nextBtnDisabled[0]}
+                    style={{ backgroundColor: nextBtnDisabled[1] }}
+                >
+                    Next question
+                </button>
 
-            <button className="button-exit" 
-            onClick={() => setAppStep(1)}
-            >
-                Exit
-            </button>
+                <button className="button-exit"
+                    onClick={() => setAppStep(1)}
+                >
+                    Exit
+                </button>
             </div>
-      </div>
+        </div >
     )
-    }
+}
 
 
 export default QuizCard;
