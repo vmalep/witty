@@ -7,16 +7,20 @@
 /* CSS Variables */
 
 html{
-  --color-primary: hsl(240, 100%, 50% );
-  --color-secondary: hsl(240, 60%, 70%);
-  --color-background: hsl(240, 100%, 90%);
+  --hsl-base-color: 200;
+  --hsl-s: 100%;
+  --hsl-l: 35%;
+
+  --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
+  --color-secondary: hsl(var(--hsl-base-color), 60%, 70%);
+  --color-background: hsl(var(--hsl-base-color), 100%, 90%);
   --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
   --white-color: hsl(0, 0%, 96.1%);
   --black-color: hsl(0, 0%, 6%);
-  --grey-color: hsl(0, 0%, 50.2%);
-  --right-color: hsl(115, 100%, 34.3%);
-  --wrong-color: hsl(23, 92.1%, 49.6%);
-  --exit-color: hsl(315, 89.6%, 15.1%);
+  --disabled-color: hsl(0, 0%, 50.2%);
+  --right-color: hsl(115, var(--hsl-s), var(--hsl-l));
+  --wrong-color: hsl(23, var(--hsl-s), var(--hsl-l));
+  --exit-color: hsl(315, var(--hsl-s), var(--hsl-l));
 }
 
 /* Main HTML element selectors */
@@ -52,7 +56,47 @@ h3 {
   margin: 20px;
   font-size: 40px;
   color: var(--black-color);
-}   
+}
+
+/* Button definitions */
+
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white-color);
+  text-align: center;
+  background-color: var(--color-primary);
+  width: 145px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: var(--box-shadow);
+}    
+
+.action-btn{
+  background-color: var(--color-primary);
+}
+
+.disabled-btn{
+  background-color: var(--disabled-color);
+}
+
+.answers-btn {
+  background-color: var(--color-secondary);
+}
+
+.right-answer-btn{
+  background-color: var(--right-color);
+}
+
+.wrong-answer-btn{
+  background-color: var(--wrong-color);
+}
+
+.exit-btn{
+  background-color: var(--color-primary);
+}
 
 /* Flex classes */
  
@@ -127,33 +171,6 @@ h3 {
   box-shadow: var(--box-shadow);
 }    
 
-/* Button definitions */
-
-button {
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--white-color);
-  text-align: center;
-  background-color: var(--color-primary);
-  width: 145px;
-  padding: 15px;
-  margin: 15px;
-  box-shadow: var(--box-shadow);
-}    
-
-.right-answer-btn{
-  background-color: var(--right-color);
-}
-
-.wrong-answer-btn{
-  background-color: var(--wrong-color);
-}
-
-.button-exit{
-  background-color: var(--exit-color);
-}
 
 .current-player {
   display: flex;
@@ -194,10 +211,6 @@ button {
 
 .quiz-card img{
   margin:1rem;
-}
-
-.answers {
-  background-color: var(--color-secondary);
 }
 
 .difficulty-off {
