@@ -3,7 +3,7 @@ import {useState} from "react";
 const Difficulty = (props) => {
     const {selectedDifficulty, setSelectedDifficulty} = props;
     
-    const levels = ["Easy","Medium","Hard"]
+    const levels = ["easy","medium","hard"]
     return (
            <>
                <h2>Select your Difficulty</h2>

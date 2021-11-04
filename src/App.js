@@ -47,6 +47,7 @@ function App() {
       && <QuizSection
           setAppStep={setAppStep}
           selectedCategory={selectedCategory}
+          selectedDifficulty={selectedDifficulty}
           setScorePc={setScorePc} />}
 
       {appStep === 3

@@ -4,7 +4,7 @@ import QuizCard from './QuizCard'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection(props) {
-    const {setAppStep, selectedCategory, setScorePc} = props
+    const {setAppStep, selectedCategory, selectedDifficulty, setScorePc} = props
 
     // To be improved with a single userSession Object or context feature
     const [apiData, setApiData] = useState([])
@@ -17,12 +17,12 @@ function QuizSection(props) {
     const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
     const amountParam = '?amount=10'
     const typeParam = '&type=multiple' //questType ? `&type=${questType}`: ''
-    /* const difficultyParam = props.difficulty ? `&difficulty=${props.difficulty}` : '' */
+    const difficultyParam = props.selectedDifficulty ? `&difficulty=${props.selectedDifficulty.toLowerCase()}` : '' 
 
     // 2BDone: The axios part should be moved to the QuizGenerator function, but not working for the moment. To be done next week.
     const baseUrl = "https://opentdb.com/api.php"
 
-    const quizURL = `${baseUrl}${amountParam}${catParam}${typeParam}`
+    const quizURL = `${baseUrl}${amountParam}${catParam}${difficultyParam}${typeParam}`
     /* console.log("quizURL: " + quizURL) */
 
     useEffect(() => {

@@ -1,7 +1,4 @@
 import { useState } from 'react'
-/* import waitingAnswer from '../images/waitingAnswer.gif'
-import wrongAnswer from '../images/wrongAnswer3.gif'
-import rightAnswer from '../images/rightAnswer5.gif' */
 import GetRandomGif from '../utils/GetRandomGif'
 
 const QuizCard = (props) => {
@@ -17,20 +14,16 @@ const QuizCard = (props) => {
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState([true, 'grey'])
-
     const [selectedAnswer, setSelectedAnswer] = useState();
-
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
 
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        /* console.log(nextBtnDisabled) */
         setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
             setGifSource(GetRandomGif("right"))
         } else setGifSource(GetRandomGif("wrong"))
 
-        /* console.log("response", response) */
         setNextBtnDisabled([false])
     }
 
@@ -53,18 +46,16 @@ const QuizCard = (props) => {
             return "right-answer-btn"
         }
     }
-    /* Exit BUTTON*/
-
-    /*     const handleExit = () => {
-            setAppStep(1)
-        } */
 
     return (
         <div className="quiz-card">
             <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
-            <p>score: {score}</p>
+            <div className="flex-spacebetween">
+                <p>Difficulty: {quizQuestion.difficulty}</p>
+                <p>Score: {score}</p>
+            </div>
             <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
-            <div>
+            <div className="flex-wrap">
                 {quizQuestion.possible_answers.map((element, index) => {
                     return (
                         <button
@@ -82,7 +73,7 @@ const QuizCard = (props) => {
                     )
                 })}
             </div>
-            <div>
+            <div className="flex-wrap">
                 <button
                     onClick={handleNext}
                     disabled={nextBtnDisabled[0]}
