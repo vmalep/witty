@@ -22,7 +22,7 @@
                             <button
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    style={{backgroundColor: selectedCategory === element.catNb 
+                                    style={{backgroundColor: selectedCategory !== element.catNb 
                                         ? `hsl(${primaryH}, 80%, 62%)` 
                                         : `hsl(${primaryH}, 72%, 50%)` 
                                         }} 
