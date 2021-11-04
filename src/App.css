@@ -142,20 +142,26 @@ h3 {
   justify-content: center;
 }
 
+.quiz-card img{
+  margin:1rem;
+}
+
 .answers {
   background-color: rgb(224, 117, 158);
 }
 
 .right-answer-btn{
-  background-color: green;
+  background-color: rgb(27, 255, 6);
 }
 
 .wrong-answer-btn{
-  background-color: red;
+  background-color: rgb(243, 103, 10);
 }
 
+
 .button-exit{
-  background-color: rgb(13, 13, 221);
+  background-color: rgb(73, 4, 56);
+
 }
 
 .difficulty-off {
