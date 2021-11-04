@@ -59,7 +59,8 @@ const QuizCard = (props) => {
                 {quizQuestion.possible_answers.map((element, index) => {
                     return (
                         <button
-                            key={index}
+                            key={quizQuestion.idNum}
+                            disabled={!nextBtnDisabled}
                             className={`answers-btn ${selectedAnswer && handleSelect(element)}`}
                             onClick={() => checkAnswer(element)}
                         >
@@ -71,7 +72,7 @@ const QuizCard = (props) => {
             <div className="flex-wrap">
                 <button
                     onClick={handleNext}
-                    disabled={nextBtnDisabled[0]}
+                    disabled={nextBtnDisabled}
                     className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
                 >
                     Next
