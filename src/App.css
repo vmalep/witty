@@ -19,7 +19,7 @@ html{
   --black-color: hsl(0, 0%, 16%);
   --disabled-color: hsl(0, 0%, 50.2%);
   --right-color: hsl(115, var(--hsl-s), var(--hsl-l));
-  --wrong-color: hsl(23, var(--hsl-s), var(--hsl-l));
+  --wrong-color: hsl(0, 100%, 50%);
   --exit-color: hsl(315, var(--hsl-s), var(--hsl-l));
 }
 
