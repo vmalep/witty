@@ -10,51 +10,50 @@ document.title = "Witty"
 
 function App() {
   const [appStep, setAppStep] = useState(0)
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(""); //the category of question selected by the user (will it be a string or a number?)
   const [userName, setUserName] = useState("");
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
   const [selectedDifficulty, setSelectedDifficulty] = useState("");
-  const [selectedCat, setSeclectedCat] = useState("") //the category of question selected by the user (will it be a string or a number?)
 
   return (
     <div className="App">
       <Header />
 
-      {appStep === 0 
-      && <UserInit
-        selectedAvatar={selectedAvatar}
-        setSelectedAvatar={setSelectedAvatar}
-        userName={userName}
-        setUserName={setUserName}
-        setAppStep={setAppStep} />
+      {appStep === 0
+        && <UserInit
+          selectedAvatar={selectedAvatar}
+          setSelectedAvatar={setSelectedAvatar}
+          userName={userName}
+          setUserName={setUserName}
+          setAppStep={setAppStep} />
       }
 
-      {appStep === 1 
-      && <Options 
-          userName={userName} 
-          selectedAvatar={selectedAvatar} 
-          appStep={appStep} 
-          setAppStep={setAppStep} 
-          selectedCategory={selectedCategory}        
+      {appStep === 1
+        && <Options
+          userName={userName}
+          selectedAvatar={selectedAvatar}
+          appStep={appStep}
+          setAppStep={setAppStep}
+          selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
           selectedDifficulty={selectedDifficulty}
           setSelectedDifficulty={setSelectedDifficulty}
-        /> 
+        />
       }
 
       {appStep === 2
-      && <QuizSection
+        && <QuizSection
           setAppStep={setAppStep}
           selectedCategory={selectedCategory}
           selectedDifficulty={selectedDifficulty}
           setScorePc={setScorePc} />}
 
       {appStep === 3
-      && <ScoreSection 
+        && <ScoreSection
           setAppStep={setAppStep}
           userName={userName}
-          scorePc={scorePc}/>}
+          scorePc={scorePc} />}
     </div>
   );
 }

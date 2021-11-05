@@ -59,7 +59,7 @@ const QuizCard = (props) => {
                 {quizQuestion.possible_answers.map((element, index) => {
                     return (
                         <button
-                            key={quizQuestion.idNum}
+                            key={index}
                             disabled={!nextBtnDisabled}
                             className={`answers-btn ${selectedAnswer && handleSelect(element)}`}
                             onClick={() => checkAnswer(element)}
