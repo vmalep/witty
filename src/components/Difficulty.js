@@ -1,7 +1,7 @@
 const Difficulty = (props) => {
     const {selectedDifficulty, setSelectedDifficulty} = props;
     
-    const levels = ["Easy","Medium","Hard"]
+    const levels = ["Easy","Medium","Hard","None"]
     return (
            <>
                <h2>Difficulty level (optional)</h2>

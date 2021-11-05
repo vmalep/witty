@@ -17,7 +17,7 @@ function QuizSection(props) {
     const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
     const amountParam = '?amount=10'
     const typeParam = '&type=multiple' //questType ? `&type=${questType}`: ''
-    const difficultyParam = selectedDifficulty ? `&difficulty=${selectedDifficulty.toLowerCase()}` : '' 
+    const difficultyParam = selectedDifficulty !== "None" ? `&difficulty=${selectedDifficulty.toLowerCase()}` : '' 
 
     // 2BDone: The axios part should be moved to the QuizGenerator function, but not working for the moment. To be done next week.
     const baseUrl = "https://opentdb.com/api.php"

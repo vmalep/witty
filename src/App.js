@@ -14,7 +14,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState(0) // Score of the user in %
-  const [selectedDifficulty, setSelectedDifficulty] = useState("");
+  const [selectedDifficulty, setSelectedDifficulty] = useState("None");
 
   return (
     <div className="App">
