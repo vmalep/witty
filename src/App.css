@@ -71,16 +71,18 @@ button {
   background-color: var(--color-primary);
   width: 145px;
   padding: 15px;
-  margin: 15px;
+  margin: 12px;
   box-shadow: var(--box-shadow);
 }    
 
 .action-btn{
   background-color: var(--color-primary);
+  border-radius: 80px;
 }
 
 .disabled-btn{
   background-color: var(--disabled-color);
+  border-radius: 80px;
 }
 
 .category-btn{
@@ -101,6 +103,7 @@ button {
 
 .exit-btn{
   background-color: var(--color-primary);
+  border-radius: 80px;
 }
 
 /* Flex classes */
@@ -200,7 +203,7 @@ button {
 .current-player-avatar {
   width: 60px;
   height: 60;
-  padding: 15px;
+  padding: 10px;
   border: none;
   border-radius: 80px;
   background-color: var(--color-primary);
