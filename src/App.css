@@ -12,8 +12,8 @@ html{
   --hsl-l: 20%;
 
   --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
-  --color-secondary: hsl(var(--hsl-base-color), 60%, 70%);
-  --color-background: hsl(var(--hsl-base-color), 100%, 90%);
+  --color-secondary: hsl(var(--hsl-base-color), 45%, 45%);
+  --color-background: hsl(var(--hsl-base-color), 50%, 96%);
   --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
   --white-color: hsl(0, 100%, 100%);
   --black-color: hsl(0, 0%, 16%);
