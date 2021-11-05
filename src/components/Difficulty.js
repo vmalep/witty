@@ -1,12 +1,10 @@
-import {useState} from "react";
-
 const Difficulty = (props) => {
     const {selectedDifficulty, setSelectedDifficulty} = props;
     
-    const levels = ["easy","medium","hard"]
+    const levels = ["Easy","Medium","Hard"]
     return (
            <>
-               <h2>Select your Difficulty</h2>
+               {/* <h2>Select your Difficulty</h2> */}
                <div className = "level">
                    {levels.map((element,index) => {
                        return(

@@ -21,6 +21,7 @@ const Options = (props) => {
                 <p className="current-player-name">{userName}</p>
                 <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
             </div>
+            <h2>Choose your options</h2>
             <Difficulty
                 selectedDifficulty={selectedDifficulty}
                 setSelectedDifficulty={setSelectedDifficulty}

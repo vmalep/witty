@@ -1,5 +1,6 @@
- import {useState} from "react";
- import { TriviaAPI } from "../utils/TriviaAPI";
+import { TriviaAPI } from "../utils/TriviaAPI";
+
+const colorConvert = require('color-convert');
  
  const Category = (props) => {
     const {selectedCategory, setSelectedCategory, setNextBtnDisabled} = props
@@ -11,15 +12,21 @@
     
      return (
             <>
-                <h2>Select your Category</h2>
+                {/* <h2>Select your Category</h2> */}
                 <div className="usernamebox">
                     {TriviaAPI.map((element , index) => {
+
+                        const primaryH = colorConvert.keyword.hsl(element.color)[0]
+
                         return(
-                            <button
+                            <button className="category-btn"
                                     key={index}
                                     onClick={() => handleCategory(element)} 
-                                    style={{backgroundColor: selectedCategory !== element.catNb ? element.color : 'purple'}} 
-                            >{element.catName}</button>   
+                                    style={{backgroundColor: selectedCategory !== element.catNb 
+                                        ? `hsl(${primaryH}, 70%, 60%)` 
+                                        : `hsl(${primaryH}, 80%, 35%)` 
+                                        }}
+                            >{element.catName}</button>
                         )
                     })}         
                 </div>

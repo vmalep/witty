@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 const Avatar = (props) => {
     const {selectedAvatar, setSelectedAvatar} = props;
 
