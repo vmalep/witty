@@ -4,7 +4,7 @@ const Difficulty = (props) => {
     const levels = ["Easy","Medium","Hard"]
     return (
            <>
-               {/* <h2>Select your Difficulty</h2> */}
+               <h2>Difficulty level (optional)</h2>
                <div className = "level">
                    {levels.map((element,index) => {
                        return(

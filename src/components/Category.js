@@ -12,7 +12,7 @@ const colorConvert = require('color-convert');
     
      return (
             <>
-                {/* <h2>Select your Category</h2> */}
+                <h2>Select your category</h2>
                 <div className="usernamebox">
                     {TriviaAPI.map((element , index) => {
 
