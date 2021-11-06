@@ -91,6 +91,7 @@ button {
 
 .answers-btn {
   background-color: var(--color-secondary);
+  overflow-wrap: break-word;
 }
 
 .right-answer-btn{
