@@ -38,13 +38,9 @@ const QuizCard = (props) => {
     }
 
     const handleSelect = (element) => {
-        if (selectedAnswer === element && selectedAnswer === quizQuestion.correct_answer) {
-            return "right-answer-btn";
-        } else if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) {
-            return "wrong-answer-btn"
-        } else if (element === quizQuestion.correct_answer) {
-            return "right-answer-btn"
-        }
+        if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
+        else if (element === quizQuestion.correct_answer) return "right-answer-btn"
+        else return null
     }
 
     return (
