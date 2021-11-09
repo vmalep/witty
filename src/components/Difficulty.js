@@ -1,7 +1,14 @@
 const Difficulty = (props) => {
     const {selectedDifficulty, setSelectedDifficulty} = props;
     
-    const levels = ["Easy","Medium","Hard","None"]
+    const levels = ["Easy","Medium","Hard"]
+
+    const handleDifficulty = (element) => {
+        selectedDifficulty === element
+        ? setSelectedDifficulty("None")
+        : setSelectedDifficulty(element)
+    }
+
     return (
            <>
                <h2>Difficulty level (optional)</h2>
@@ -10,7 +17,7 @@ const Difficulty = (props) => {
                        return(
                            <button 
                            key={index}
-                           onClick={() => setSelectedDifficulty(element)}
+                           onClick={() => handleDifficulty(element)}
                            className={selectedDifficulty === element ? "difficulty-on" : "difficulty-off"}
                            >{element}</button>
                        )
