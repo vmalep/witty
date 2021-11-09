@@ -30,7 +30,8 @@ const QuizCard = (props) => {
     const handleNext = () => {
         // If we have reached the last question, we move to the next step: Score section
         if (quizList[questCount].questNum >= quizList.length) {
-            setScorePc(Math.round((score / (quizList.length + 1) * 100), 2))
+            setScorePc(Math.round((score / (quizList.length) * 100)))
+            console.log(`score: ${score} sur ${quizList.length}. questcCount: ${questCount}`)
             setAppStep(3)
         } else {
             setQuestCount(questCount + 1) // Otherwise, we move to the next question     

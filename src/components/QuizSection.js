@@ -38,7 +38,7 @@ function QuizSection(props) {
         }
     }, [apiData])
 
-    console.log("quizList: ", quizList)
+    /* console.log("quizList: ", quizList) */
 
     return (
         <>
