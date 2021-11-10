@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ChooseCountDown from "./chooseCountDown";
+import ChooseCountDown from "./ChooseCountDown";
 import Difficulty from "./Difficulty";
 import Category from "./Category";
 
