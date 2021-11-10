@@ -10,7 +10,7 @@ function QuizSection(props) {
         selectedCategory,
         selectedDifficulty,
         setScorePc,
-        countDownTime
+        countDown
     } = props
 
     const [apiData, setApiData] = useState([]) // Get the fetched API
@@ -59,7 +59,7 @@ function QuizSection(props) {
                                 setQuestCount={setQuestCount}
                                 setScorePc={setScorePc}
                                 setAppStep={setAppStep}
-                                countDownTime={countDownTime} />
+                                countDown={countDown} />
                         )
                     })
             }

@@ -1,18 +1,18 @@
-import * as React from "react";
-import { render } from "react-dom";
+import { useState, useEffect } from 'react'
 
 const CountDownTimer = (props) => {
-  const { CountDownTime } = props
+  const { setCountDownFinished } = props
 
-  const [counter, setCounter] = React.useState(CountDownTime);
+  const [counter, setCounter] = useState(10);
   
-  React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  }, [counter]);
+  useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000)
+    !counter && setCountDownFinished(true)
+  }, [counter])
 
   return (
     <div className='count-down'>Countdown: {counter}</div>
-  );
+  )
 }
 
 export default CountDownTimer
