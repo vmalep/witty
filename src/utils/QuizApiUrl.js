@@ -2,10 +2,8 @@
 // Return apiData
 function QuizApiUrl(api, selectedCategory, selectedDifficulty) {
 
-    console.log(`Launching QuizApiFetch for ${api}`) // to be adapted if later we use different API
+    /* console.log(`Launching QuizApiFetch for ${api}`) */ // to be adapted if later we use different API
 
-    console.log('test')
-    
     // To be adapted once those options will be available in the previous step
     const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
     const amountParam = '?amount=10'

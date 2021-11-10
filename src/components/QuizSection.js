@@ -5,7 +5,13 @@ import QuizApiUrl from '../utils/QuizApiUrl'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection(props) {
-    const {setAppStep, selectedCategory, selectedDifficulty, setScorePc} = props
+    const {
+        setAppStep,
+        selectedCategory,
+        selectedDifficulty,
+        setScorePc,
+        countDown
+    } = props
 
     const [apiData, setApiData] = useState([]) // Get the fetched API
     const [dataLoaded, setDataLoaded] = useState(false) // Boolean to check if API is loaded
@@ -52,7 +58,8 @@ function QuizSection(props) {
                                 setScore={setScore}
                                 setQuestCount={setQuestCount}
                                 setScorePc={setScorePc}
-                                setAppStep={setAppStep} />
+                                setAppStep={setAppStep}
+                                countDown={countDown} />
                         )
                     })
             }

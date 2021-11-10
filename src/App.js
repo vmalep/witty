@@ -16,7 +16,7 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [scorePc, setScorePc] = useState() // Score of the user in %
   const [selectedDifficulty, setSelectedDifficulty] = useState("None");
- 
+  const [countDown, setCountDown] = useState(false); // In seconds
 
   return (
     <div className="App">
@@ -41,6 +41,8 @@ function App() {
           setSelectedCategory={setSelectedCategory}
           selectedDifficulty={selectedDifficulty}
           setSelectedDifficulty={setSelectedDifficulty}
+          countDown={countDown}
+          setCountDown={setCountDown}
         />
       }
 
@@ -49,7 +51,8 @@ function App() {
           setAppStep={setAppStep}
           selectedCategory={selectedCategory}
           selectedDifficulty={selectedDifficulty}
-          setScorePc={setScorePc} />}
+          setScorePc={setScorePc}
+          countDown={countDown} />}
 
       {appStep === 3
         && <ScoreSection

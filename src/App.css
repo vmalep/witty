@@ -1,12 +1,11 @@
 
 .App {
   background-color: var(--color-background);
-  /* margin-bottom: -3em; */
-} 
+}
 
 /* Basic CSS Variables */
 
-html{
+html {
   --hsl-base-color: 344;
   --hsl-s: 97%;
   --hsl-l: 15%;
@@ -236,8 +235,9 @@ button {
   font-weight: bold;
 }  
 
-.quiz-card img{
+.quiz-animation{
   margin:1rem;
+  height: 200px;
 }
 
 .difficulty-off {
@@ -253,6 +253,8 @@ button {
   width: 100px;
   margin: 5px;
 }
+
+
   
 /*.trophy {
     display: block;
