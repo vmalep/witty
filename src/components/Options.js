@@ -12,8 +12,8 @@ const Options = (props) => {
         setSelectedCategory,
         selectedDifficulty,
         setSelectedDifficulty,
-        countDownTime,
-        setCountDownTime
+        countDown,
+        setCountDown
     } = props
     
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
@@ -33,8 +33,8 @@ const Options = (props) => {
                 <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
             </div>
             <ChooseCountDown
-                countDownTime={countDownTime}
-                setCountDownTime={setCountDownTime}
+                countDown={countDown}
+                setCountDown={setCountDown}
             />
             <Difficulty
                 selectedDifficulty={selectedDifficulty}

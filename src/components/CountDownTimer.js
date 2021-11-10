@@ -11,13 +11,8 @@ const CountDownTimer = (props) => {
   }, [counter]);
 
   return (
-    <div className="App">
-      <div>Countdown: {counter}</div>
-    </div>
+    <div className='count-down'>Countdown: {counter}</div>
   );
 }
-
-/* const rootElement = document.getElementById("root");
-render(<App />, rootElement); */
 
 export default CountDownTimer

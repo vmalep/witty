@@ -1,16 +1,13 @@
 const ChooseCountDown = (props) => {
-    const {countDownTime, setCountDownTime} = props;
+    const {countDown, setCountDown} = props;
     
-    const handleCountDown = (element) => {
-
+    function handleCountDown() {
+        setCountDown(!countDown)
     }
 
     return (
            <>
-               <h2>Choose your countdown time (optional)</h2>
-               <div >
-                   <p>{countDownTime} seconds</p>
-               </div>
+               <h2>Countdown <input type="checkbox" onChange={handleCountDown} checked={countDown} /></h2>
           </>
        )
    }
