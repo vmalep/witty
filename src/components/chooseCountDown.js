@@ -9,7 +9,7 @@ const ChooseCountDown = (props) => {
            <>
                <h2>Choose your countdown time (optional)</h2>
                <div >
-                   <p>To be done</p>
+                   <p>{countDownTime} seconds</p>
                </div>
           </>
        )
