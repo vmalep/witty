@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import GetRandomGif from '../utils/GetRandomGif'
+import CountDownTimer from './CountDownTimer'
 
 const QuizCard = (props) => {
     const {
@@ -46,7 +47,8 @@ const QuizCard = (props) => {
 
     return (
         <div className="quiz-card">
-            <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
+            <CountDownTimer />
+            {/* <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." /> */}
             <div className="flex-spacebetween">
                 <p>Difficulty: {quizQuestion.difficulty}</p>
                 <p>Score: {score}</p>

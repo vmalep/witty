@@ -1,12 +1,14 @@
 
 .App {
   background-color: var(--color-background);
-  /* margin-bottom: -3em; */
-} 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
 /* Basic CSS Variables */
 
-html{
+html {
   --hsl-base-color: 344;
   --hsl-s: 97%;
   --hsl-l: 15%;
