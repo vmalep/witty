@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react'
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 const CountDownTimer = (props) => {
   const { setCountDownFinished } = props
 
-  const [counter, setCounter] = useState(10);
-  
-  useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000)
-    !counter && setCountDownFinished(true)
-  }, [counter])
-
   return (
-    <div className='count-down'>Countdown: {counter}</div>
+    <CountdownCircleTimer
+      isPlaying
+      duration={10}
+      colors={[
+        ['#004777', 0.33],
+        ['#F7B801', 0.33],
+        ['#A30000', 0.33],
+      ]}
+      onComplete={() => setCountDownFinished(true)}
+    >
+      {({ remainingTime }) => remainingTime}
+    </CountdownCircleTimer>
   )
 }
 

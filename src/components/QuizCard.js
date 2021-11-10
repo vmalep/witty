@@ -53,12 +53,14 @@ const QuizCard = (props) => {
 
     return (
         <div className="quiz-card">
-            {(countDown && !selectedAnswer) &&
-                <CountDownTimer setCountDownFinished={setCountDownFinished}/>
-            }
-            {(!countDown || selectedAnswer) &&
-                <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
-            }
+            <div className="quiz-animation">
+                {(countDown && !selectedAnswer) &&
+                    <CountDownTimer setCountDownFinished={setCountDownFinished} />
+                }
+                {(!countDown || selectedAnswer) &&
+                    <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
+                }
+            </div>
             <div className="flex-spacebetween">
                 <p>Difficulty: {quizQuestion.difficulty}</p>
                 <p>Score: {score}</p>

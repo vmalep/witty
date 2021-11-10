@@ -235,8 +235,9 @@ button {
   font-weight: bold;
 }  
 
-.quiz-card img{
+.quiz-animation{
   margin:1rem;
+  height: 200px;
 }
 
 .difficulty-off {
