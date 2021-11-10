@@ -1,9 +1,10 @@
 import * as React from "react";
 import { render } from "react-dom";
 
-const CountDownTimer = () => {
+const CountDownTimer = (props) => {
+  const { CountDownTime } = props
 
-  const [counter, setCounter] = React.useState(10);
+  const [counter, setCounter] = React.useState(CountDownTime);
   
   React.useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);

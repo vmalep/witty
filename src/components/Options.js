@@ -3,7 +3,17 @@ import Difficulty from "./Difficulty";
 import Category from "./Category";
 
 const Options = (props) => {
-    const { userName, selectedAvatar, setAppStep, selectedCategory, setSelectedCategory, selectedDifficulty, setSelectedDifficulty } = props
+    const {
+        userName,
+        selectedAvatar,
+        setAppStep,
+        selectedCategory,
+        setSelectedCategory,
+        selectedDifficulty,
+        setSelectedDifficulty,
+        countDownTime,
+        setCountDownTime
+    } = props
     
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
