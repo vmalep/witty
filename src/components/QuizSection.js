@@ -1,37 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import QuizCard from './QuizCard'
+import QuizApiUrl from '../utils/QuizApiUrl'
 import QuizGenerator from '../utils/QuizGenerator'
 
 function QuizSection(props) {
     const {setAppStep, selectedCategory, selectedDifficulty, setScorePc} = props
 
-    // To be improved with a single userSession Object or context feature
-    const [apiData, setApiData] = useState([])
-    const [dataLoaded, setDataLoaded] = useState(false)
-    const [quizList, setQuizList] = useState([])
-    const [questCount, setQuestCount] = useState(0)
-    const [score, setScore] = useState(0)
+    const [apiData, setApiData] = useState([]) // Get the fetched API
+    const [dataLoaded, setDataLoaded] = useState(false) // Boolean to check if API is loaded
+    const [quizList, setQuizList] = useState([]) // List of question in a defined format
+    const [questCount, setQuestCount] = useState(0) // Keep track of the current question
+    const [score, setScore] = useState(0) // Sum the correct responses
 
-    // To be adapted once those options will be available in the previous step
-    const catParam = selectedCategory ? `&category=${selectedCategory}` : ''
-    const amountParam = '?amount=10'
-    const typeParam = '&type=multiple' //questType ? `&type=${questType}`: ''
-    const difficultyParam = selectedDifficulty !== "None" ? `&difficulty=${selectedDifficulty.toLowerCase()}` : '' 
-
-    // 2BDone: The axios part should be moved to the QuizGenerator function, but not working for the moment. To be done next week.
-    const baseUrl = "https://opentdb.com/api.php"
-
-    const quizURL = `${baseUrl}${amountParam}${catParam}${difficultyParam}${typeParam}`
+    // Build the API url for the next axios request
+    const quizURL = QuizApiUrl('trivia', selectedCategory, selectedDifficulty) //`${baseUrl}${amountParam}${catParam}${difficultyParam}${typeParam}`
     /* console.log("quizURL: " + quizURL) */
 
+    // Fetch the data from the API (unable to run it in a separate function)
     useEffect(() => {
         axios.get(quizURL)
           .then(res => setApiData(res.data.results))
           .then(setDataLoaded(true))
           .catch(err => console.log(err))
         }, [quizURL])
-        
+    
+    // If apiData is not empty, generate the list of question out of it
     useEffect(() => {
         if (Object.keys(apiData).length !== 0){
             setQuizList(QuizGenerator('trivia', apiData))

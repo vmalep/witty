@@ -14,21 +14,6 @@ const ScoreSection = (props) => {
     
   }, [scorePc])
 
-
-
-
-  /* const [feedbackMsg, setFeedbackMsg] = useState("") */
-
-  /*     switch(score) {
-          case (x <:
-            // code block
-            break;
-          case y:
-            // code block
-            break;
-          default:
-            // code block
-        } */
   const handleClick = () => {
     setAppStep(1)
   }
