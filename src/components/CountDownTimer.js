@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Timer from './Timer';
 
 const CountDownTimer = (props) => {
   const { setCountDownFinished } = props
@@ -11,7 +12,9 @@ const CountDownTimer = (props) => {
   }, [counter])
 
   return (
-    <div className='count-down'>Countdown: {counter}</div>
+    <div className="timer">
+      <Timer />
+    </div>
   )
 }
 

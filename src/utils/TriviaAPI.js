@@ -18,7 +18,18 @@ export const TriviaAPI = [
         catName:"Music",
         catNb:"12",
         color:"orange"
+    },
+    {
+        catName:"Geography",
+        catNb:"22",
+        color:"black"
+    },
+    {
+        catName:"General",
+        catNb:"9",
+        color:"purple"
     }
+
 ]
  
  
