@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChooseCountDown from "./chooseCountDown";
 import Difficulty from "./Difficulty";
 import Category from "./Category";
 
@@ -31,7 +32,10 @@ const Options = (props) => {
                 <p className="current-player-name">{userName}</p>
                 <img className="current-player-avatar" src={selectedAvatar.src} alt={selectedAvatar.alt} />
             </div>
-            {/* <h2>Choose your options</h2> */}
+            <ChooseCountDown
+                countDownTime={countDownTime}
+                setCountDownTime={setCountDownTime}
+            />
             <Difficulty
                 selectedDifficulty={selectedDifficulty}
                 setSelectedDifficulty={setSelectedDifficulty}
