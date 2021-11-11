@@ -10,7 +10,7 @@ const ScoreBoard = (props) => {
           <h2>Overall Results</h2>
           {results.map((item, index) => (
             <div>
-                <p key={index}>{TriviaAPI.find(category => category.catNb === item.catNb).catName} : {item.scorePc}%</p>
+                <p className="score" style={{color: TriviaAPI.find(category => category.catNb === item.catNb).color}}  key={index}>{TriviaAPI.find(category => category.catNb === item.catNb).catName} : {item.scorePc}%</p>
             </div>
         ))}      
         </>
