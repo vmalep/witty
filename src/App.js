@@ -17,6 +17,7 @@ function App() {
   const [scorePc, setScorePc] = useState() // Score of the user in %
   const [selectedDifficulty, setSelectedDifficulty] = useState("None");
   const [countDown, setCountDown] = useState(false); // In seconds
+  const [results, setResults] = useState({});
 
   return (
     <div className="App">
@@ -52,13 +53,16 @@ function App() {
           selectedCategory={selectedCategory}
           selectedDifficulty={selectedDifficulty}
           setScorePc={setScorePc}
-          countDown={countDown} />}
+          countDown={countDown}
+          setResults={setResults}
+          results={results} />}
 
       {appStep === 3
         && <ScoreSection
           setAppStep={setAppStep}
           userName={userName}
-          scorePc={scorePc} />}
+          scorePc={scorePc}
+          results={results}/>}
       <Footer />
     </div>
   );

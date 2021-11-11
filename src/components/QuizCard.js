@@ -12,7 +12,10 @@ const QuizCard = (props) => {
         setQuestCount,
         setScorePc,
         setAppStep,
-        countDown
+        countDown,
+        selectedCategory,
+        setResults,
+        results
     } = props
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
@@ -33,8 +36,10 @@ const QuizCard = (props) => {
     const handleNext = () => {
         // If we have reached the last question, we move to the next step: Score section
         if (quizList[questCount].questNum >= quizList.length) {
-            setScorePc(Math.round((score / (quizList.length) * 100)))
-            console.log(`score: ${score} sur ${quizList.length}. questcCount: ${questCount}`)
+            const tempScore = Math.round((score / (quizList.length) * 100))
+            setScorePc(tempScore)
+            //console.log(`score: ${score} sur ${quizList.length}. questcCount: ${questCount}`)
+            setResults(...results, {catNb:selectedCategory, scorePc:tempScore})
             setAppStep(3)
         } else {
             setQuestCount(questCount + 1) // Otherwise, we move to the next question     
