@@ -15,7 +15,7 @@ const Options = (props) => {
         countDown,
         setCountDown
     } = props
-    
+
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
     const handleClick = () => {
@@ -45,13 +45,15 @@ const Options = (props) => {
                 setSelectedCategory={setSelectedCategory}
                 setNextBtnDisabled={setNextBtnDisabled}
             />
-            <button
-                onClick={handleClick}
-                disabled={nextBtnDisabled}
-                className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
-            >
-                Next
-            </button>
+            <div> {/* to have the button under the categories */}
+                <button
+                    onClick={handleClick}
+                    disabled={nextBtnDisabled}
+                    className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
+                >
+                    Next
+                </button>
+            </div>
         </>
     )
 }
