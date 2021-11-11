@@ -263,3 +263,8 @@ button {
     width: auto;
     height: auto;
 }*/
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+}
