@@ -1,15 +1,16 @@
-import { useState } from "react";
-
+/* import { useState } from "react"; */
+import { TriviaAPI } from "../utils/TriviaAPI"
 
 const ScoreBoard = (props) => {
     const {results} = props
-       
+    
+    console.log(results)
     return (
         <>
           <h2>Overall Results</h2>
           {results.map((item, index) => (
             <div>
-                <p key={index}>{item.catNb} : {item.scorePc}%</p>
+                <p key={index}>{TriviaAPI.find(category => category.catNb === item.catNb).catName} : {item.scorePc}%</p>
             </div>
         ))}      
         </>

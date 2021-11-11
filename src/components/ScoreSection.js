@@ -26,7 +26,7 @@ const ScoreSection = (props) => {
       <h2>Hi {userName}!</h2>
       <h2>Your score is {scorePc}%</h2>
       <button onClick={handleClick}>Start again!</button>
-      {/*<ScoreBoard results={results}/>*/}
+      <ScoreBoard results={results}/>
     </>
   )
 }
