@@ -22,7 +22,7 @@ export const TriviaAPI = [
     {
         catName:"Geography",
         catNb:"22",
-        color:"black"
+        color:"teal"
     },
     {
         catName:"General",
