@@ -37,9 +37,11 @@ const QuizCard = (props) => {
         // If we have reached the last question, we move to the next step: Score section
         if (quizList[questCount].questNum >= quizList.length) {
             const tempScore = Math.round((score / (quizList.length) * 100))
+            const newResults = [...results]
             setScorePc(tempScore)
+            newResults.push({catNb:selectedCategory, scorePc:tempScore})
             //console.log(`score: ${score} sur ${quizList.length}. questcCount: ${questCount}`)
-            setResults(...results, {catNb:selectedCategory, scorePc:tempScore})
+            setResults(newResults)
             setAppStep(3)
         } else {
             setQuestCount(questCount + 1) // Otherwise, we move to the next question     

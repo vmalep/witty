@@ -4,7 +4,7 @@ import ScoreBoard from "./ScoreBoard";
 
 
 const ScoreSection = (props) => {
-  const { setAppStep, userName, scorePc, results, setResults } = props
+  const { setAppStep, userName, scorePc, results } = props
   const [resultTrophy, setResultTrophy] = useState("");
 
   useEffect(() => {

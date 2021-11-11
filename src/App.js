@@ -17,7 +17,7 @@ function App() {
   const [scorePc, setScorePc] = useState() // Score of the user in %
   const [selectedDifficulty, setSelectedDifficulty] = useState("None");
   const [countDown, setCountDown] = useState(false); // In seconds
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState([]);
 
   return (
     <div className="App">
