@@ -18,7 +18,7 @@ const Difficulty = (props) => {
                            <button 
                            key={index}
                            onClick={() => handleDifficulty(element)}
-                           className={selectedDifficulty === element ? "difficulty-on" : "difficulty-off"}
+                           className={selectedDifficulty === element ? "selected-btn" : "unselected-btn"}
                            >{element}</button>
                        )
                    })}

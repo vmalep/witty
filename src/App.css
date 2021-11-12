@@ -81,7 +81,8 @@ button {
   color: var(--white-color);
   text-align: center;
   background-color: var(--color-primary);
-  width: 145px;
+  min-width: 100px;
+/*   width: 145px; */
   padding: 15px;
   margin: 12px;
   box-shadow: var(--box-shadow);
@@ -117,6 +118,20 @@ button {
 .exit-btn{
   background-color: var(--color-primary);
   border-radius: 80px;
+}
+
+.unselected-btn {
+  background-color: var(--color-secondary);
+  border-radius: 80px;
+/*   width: 100px;
+  margin: 5px; */
+}
+    
+.selected-btn {
+  background-color: var(--color-primary);
+  border-radius: 80px;
+/*   width: 100px;
+  margin: 5px; */
 }
 
 /* Flex classes */
@@ -191,12 +206,11 @@ button {
   margin: 20px;
   box-shadow: var(--box-shadow);
 }    
-
-
+/* 
 .selected-btn {
   background-color: white;
   border: solid black 3px
-}
+} */
 
 .current-player {
   display: flex;
@@ -239,30 +253,6 @@ button {
   margin:1rem;
   height: 200px;
 }
-
-.difficulty-off {
-  background-color: var(--color-secondary);
-  border-radius: 100px;
-  width: 100px;
-  margin: 5px;
-}
-    
-.difficulty-on {
-  background-color: var(--color-primary);
-  border-radius: 100px;
-  width: 100px;
-  margin: 5px;
-}
-
-
-  
-/*.trophy {
-    display: block;
-    max-width:230px;
-    max-height:95px;
-    width: auto;
-    height: auto;
-}*/
 
 .score {
   font-size: 24px;
