@@ -9,7 +9,6 @@ function QuizSection(props) {
         setAppStep,
         selectedCategory,
         selectedDifficulty,
-        setScorePc,
         countDown,
         setResults,
         results
@@ -59,7 +58,6 @@ function QuizSection(props) {
                                 score={score} 
                                 setScore={setScore}
                                 setQuestCount={setQuestCount}
-                                setScorePc={setScorePc}
                                 setAppStep={setAppStep}
                                 countDown={countDown}
                                 selectedCategory={selectedCategory}

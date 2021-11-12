@@ -14,10 +14,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(""); //the category of question selected by the user (will it be a string or a number?)
   const [userName, setUserName] = useState("");
   const [selectedAvatar, setSelectedAvatar] = useState({});
-  const [scorePc, setScorePc] = useState() // Score of the user in %
   const [selectedDifficulty, setSelectedDifficulty] = useState("None");
   const [countDown, setCountDown] = useState(false); // In seconds
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState([]); // results.catNb and results.scorePc for each round of question
 
   return (
     <div className="App">
@@ -52,7 +51,6 @@ function App() {
           setAppStep={setAppStep}
           selectedCategory={selectedCategory}
           selectedDifficulty={selectedDifficulty}
-          setScorePc={setScorePc}
           countDown={countDown}
           setResults={setResults}
           results={results} />}
@@ -61,7 +59,6 @@ function App() {
         && <ScoreSection
           setAppStep={setAppStep}
           userName={userName}
-          scorePc={scorePc}
           results={results}/>}
       <Footer />
     </div>

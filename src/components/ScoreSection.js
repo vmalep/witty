@@ -4,8 +4,10 @@ import ScoreBoard from "./ScoreBoard";
 
 
 const ScoreSection = (props) => {
-  const { setAppStep, userName, scorePc, results } = props
+  const { setAppStep, userName, results } = props
   const [resultTrophy, setResultTrophy] = useState("");
+
+  const scorePc = results.at(-1).scorePc
 
   useEffect(() => {
     if (scorePc <= 25) setResultTrophy(Trophy[3].src)
