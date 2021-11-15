@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallBack } from 'react'
 import GetRandomGif from '../utils/GetRandomGif'
 import CountDownTimer from './CountDownTimer'
 
@@ -22,7 +22,8 @@ const QuizCard = (props) => {
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     const [countDownFinished, setCountDownFinished] = useState(false)
 
-    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+    const checkAnswer = useCallBack(
+        (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
             setScore(score + 1)
@@ -30,7 +31,7 @@ const QuizCard = (props) => {
         } else setGifSource(GetRandomGif("wrong"))
 
         setNextBtnDisabled(false)
-    }
+    }, [quizList, questCount, score, setScore])
 
     const handleNext = () => {
         // If we have reached the last question...
@@ -48,7 +49,7 @@ const QuizCard = (props) => {
 
     useEffect(() => {
         countDownFinished && checkAnswer("no answer")
-    }, [countDownFinished])
+    }, [countDownFinished, checkAnswer])
 
     const handleSelect = (element) => {
         if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
