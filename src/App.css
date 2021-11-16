@@ -12,7 +12,7 @@ html {
 
   --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
   --color-secondary: hsl(var(--hsl-base-color), 100%, 70%);
-  --color-background: hsl(var(--hsl-base-color), 50%, 96%);
+  --color-background: hsl(var(--hsl-base-color), 80%, 94%);
   --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
   --white-color: hsl(0, 100%, 100%);
   --black-color: hsl(0, 0%, 16%);
@@ -35,7 +35,7 @@ body {
   box-sizing: border-box;
   margin: 0em auto;
   text-align: center;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
 }  
 
@@ -83,7 +83,7 @@ button {
   text-align: center;
   background-color: var(--color-primary);
   min-width: 100px;
-/*   width: 145px; */
+  width: 145px;
   padding: 15px;
   margin: 12px;
   box-shadow: var(--box-shadow);
