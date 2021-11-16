@@ -10,11 +10,11 @@ const ChooseCountDown = (props) => {
                 onClick={() => handleCountDown()}
                 className={
                     countDown
-                    ? "selected-btn"
-                    : "unselected-btn"
+                    ? "action-btn"
+                    : "disabled-btn"
                 }
             >
-                10s countdown
+                Countdown
             </button>
     )
 }

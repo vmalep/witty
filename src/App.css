@@ -48,7 +48,7 @@ h1 {
 
 h2 {
   padding: 10px;
-  margin: 20px;
+  margin: 20px 20px 5px 20px;
   color: var(--black-color);
 }    
 
@@ -217,6 +217,7 @@ button {
   flex-direction: row;
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: 20px;
 }    
 
 .current-player-name {
