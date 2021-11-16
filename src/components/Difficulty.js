@@ -3,6 +3,11 @@ const Difficulty = (props) => {
     
     const levels = ["Easy","Medium","Hard"]
 
+    /**
+     * If the selected difficulty is the one given as parameter, remove it
+     * otherwise, update the selectedDifficulty with it
+     * @param {string} element 
+     */
     const handleDifficulty = (element) => {
         selectedDifficulty === element
         ? setSelectedDifficulty("None")

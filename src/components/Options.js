@@ -18,14 +18,6 @@ const Options = (props) => {
 
     const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
-    const handleClick = () => {
-        if (!selectedDifficulty || !selectedCategory) {
-            setNextBtnDisabled(true)
-        }
-        setNextBtnDisabled(false)
-        setAppStep(2)
-    }
-
     return (
         <>
             <div className="current-player">
@@ -47,7 +39,7 @@ const Options = (props) => {
             />
             <div> {/* to have the button under the categories */}
                 <button
-                    onClick={handleClick}
+                    onClick={() => setAppStep(2)}
                     disabled={nextBtnDisabled}
                     className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
                 >

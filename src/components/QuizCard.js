@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallBack } from 'react'
+import { useState, useEffect } from 'react'
 import GetRandomGif from '../utils/GetRandomGif'
 import CountDownTimer from './CountDownTimer'
 
@@ -22,7 +22,7 @@ const QuizCard = (props) => {
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     const [countDownFinished, setCountDownFinished] = useState(false)
 
-/*     const checkAnswer = useCallBack(
+/*     const checkAnswer = useCallBack( // Breaks the code
         (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
@@ -33,6 +33,13 @@ const QuizCard = (props) => {
         setNextBtnDisabled(false)
     }, [quizList, questCount, score, setScore]) */
 
+    /**
+     * Receive the selected answer value and check it with the correct one
+     * If correct, increment the score value by 1 and select a 'right' gif
+     * Otherwise select a 'wrong' gif
+     * Then activate the Next button
+     * @param {string} response 
+     */
     const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
@@ -43,6 +50,11 @@ const QuizCard = (props) => {
         setNextBtnDisabled(false)
     }
 
+    /**
+     * Check if we have reached the last question and if so
+     * add the selected category and the score in % into the results state
+     * otherwise move to the next question
+     */
     const handleNext = () => {
         // If we have reached the last question...
         if (quizList[questCount].questNum >= quizList.length) {
@@ -59,8 +71,14 @@ const QuizCard = (props) => {
 
     useEffect(() => {
         countDownFinished && checkAnswer("no answer")
-    }, [countDownFinished])
+    }, [countDownFinished]) // Warning for missing dependency, but useCallBack breaks the code and
+    // moving the checkAnswer function in a separate file only multiply this warning for each set'State' used in that function...
 
+    /**
+     * 
+     * @param {string} element 
+     * @returns 
+     */
     const handleSelect = (element) => {
         if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
         else if (element === quizQuestion.correct_answer) return "right-answer-btn"
@@ -114,6 +132,5 @@ const QuizCard = (props) => {
         </div >
     )
 }
-
 
 export default QuizCard;

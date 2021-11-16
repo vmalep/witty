@@ -6,9 +6,9 @@
 /* Basic CSS Variables */
 
 html {
-  --hsl-base-color: 344;
-  --hsl-s: 97%;
-  --hsl-l: 15%;
+  --hsl-base-color: 34;
+  --hsl-s: 100%;
+  --hsl-l: 60%;
 
   --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
   --color-secondary: hsl(var(--hsl-base-color), 45%, 45%);

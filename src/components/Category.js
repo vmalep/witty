@@ -5,6 +5,10 @@ const colorConvert = require('color-convert');
 const Category = (props) => {
     const { selectedCategory, setSelectedCategory, setNextBtnDisabled } = props
 
+    /**
+     * Update the selectedCategory state and activate the Next button 
+     * @param {object} element 
+     */
     const handleCategory = (element) => {
         setSelectedCategory(element.catNb);
         setNextBtnDisabled(false)

@@ -20,11 +20,14 @@ function QuizSection(props) {
     const [questCount, setQuestCount] = useState(0) // Keep track of the current question
     const [score, setScore] = useState(0) // Sum the correct responses
 
-    // Build the API url for the next axios request
+    /**
+     * Build the API url for the next axios request
+     */
     const quizURL = QuizApiUrl('trivia', selectedCategory, selectedDifficulty) //`${baseUrl}${amountParam}${catParam}${difficultyParam}${typeParam}`
-    /* console.log("quizURL: " + quizURL) */
 
-    // Fetch the data from the API (unable to run it in a separate function)
+    /**
+     * Fetch the data from the API (unable to run it in a separate function)
+     */
     useEffect(() => {
         axios.get(quizURL)
           .then(res => setApiData(res.data.results))
@@ -32,14 +35,14 @@ function QuizSection(props) {
           .catch(err => console.log(err))
         }, [quizURL])
     
-    // If apiData is not empty, generate the list of question out of it
+    /**
+     * If apiData is not empty, generate the list of question out of it
+     */
     useEffect(() => {
         if (Object.keys(apiData).length !== 0){
             setQuizList(QuizGenerator('trivia', apiData))
         }
     }, [apiData])
-
-    /* console.log("quizList: ", quizList) */
 
     return (
         <>
@@ -48,7 +51,7 @@ function QuizSection(props) {
                 quizList
                     .filter((element) => quizList.indexOf(element) === questCount)
                     .map((element, index) => {
-                        /* console.log(element) */
+
                         return (
                             <QuizCard
                                 key={element.questNum}
