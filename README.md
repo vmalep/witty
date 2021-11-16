@@ -12,7 +12,7 @@
 <h1>Witty</h1>
 
  
- <p>The project is a single page app named "Witty" .
+ <p>The project is a single page app named Witty .
  Witty allows you to learn and expand your knowledge depending on the topic you choose.</p>
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
@@ -31,9 +31,9 @@
 <br />
 
 <p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
- <a href="https://github.com/vmalep">Pierre Van Male</a>
- <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
- <a href="https://github.com/gc2211">Gauthier CHATEL</a>
+- <a href="https://github.com/vmalep">Pierre Van Male</a>
+- <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
+- <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
 <br />
 
@@ -50,12 +50,12 @@ We used Jira as our main tool to assist in the project management. For day to da
 
 <h2>How the app works</h2>
  
-  1 Select your avatar
-  2 Choose your username
-  3 Countdown on/off
-  4 Pick the difficulty and category in which you want test your knowledge in
-  5 Click next and ... you are good to go !
-  6 Exit the game anytime by simply clicking the Exit button 
+ - 1 Select your avatar
+ - 2 Choose your username
+ - 3 Countdown on/off
+ - 4 Pick the difficulty and category in which you want test your knowledge in
+ - 5 Click next and ... you are good to go !
+ - 6 Exit the game anytime by simply clicking the Exit button 
  
 <br />
 
