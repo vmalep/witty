@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import GetRandomGif from '../utils/GetRandomGif'
 import CountDownTimer from './CountDownTimer'
 
@@ -22,7 +22,14 @@ const QuizCard = (props) => {
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     const [countDownFinished, setCountDownFinished] = useState(false)
 
-    /*     const checkAnswer = useCallBack( // Breaks the code
+        /**
+     * Receive the selected answer value and check it with the correct one
+     * If correct, increment the score value by 1 and select a 'right' gif
+     * Otherwise select a 'wrong' gif
+     * Then activate the Next button
+     * @param {string} response 
+     */
+        const checkAnswer = useCallback( // Breaks the code
             (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
             setSelectedAnswer(response);
             if (response === quizList[questCount].correct_answer) {
@@ -31,24 +38,7 @@ const QuizCard = (props) => {
             } else setGifSource(GetRandomGif("wrong"))
     
             setNextBtnDisabled(false)
-        }, [quizList, questCount, score, setScore]) */
-
-    /**
-     * Receive the selected answer value and check it with the correct one
-     * If correct, increment the score value by 1 and select a 'right' gif
-     * Otherwise select a 'wrong' gif
-     * Then activate the Next button
-     * @param {string} response 
-     */
-    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        setSelectedAnswer(response);
-        if (response === quizList[questCount].correct_answer) {
-            setScore(score + 1)
-            setGifSource(GetRandomGif("right"))
-        } else setGifSource(GetRandomGif("wrong"))
-
-        setNextBtnDisabled(false)
-    }
+        }, [quizList, questCount, score, setScore])
 
     /**
      * Check if we have reached the last question and if so
@@ -71,13 +61,13 @@ const QuizCard = (props) => {
 
     useEffect(() => {
         countDownFinished && checkAnswer("no answer")
-    }, [countDownFinished]) // Warning for missing dependency, but useCallBack breaks the code and
+    }, [countDownFinished, checkAnswer]) // Warning for missing dependency, but useCallBack breaks the code and
     // moving the checkAnswer function in a separate file only multiply this warning for each set'State' used in that function...
 
     /**
-     * 
+     * Manage the green and red color for the right and wrong answer buttons
      * @param {string} element 
-     * @returns 
+     * @returns {string}
      */
     const handleSelect = (element) => {
         if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
