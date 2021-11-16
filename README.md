@@ -4,10 +4,10 @@
 
 
 <br />
+ 
+   <img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
 
-<p>
-
-<img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150">
+<br />
 
 <h1>Witty</h1>
 
@@ -72,4 +72,4 @@ React Router
 <br />
 
 <h2>License</h2>
-See the LICENSE file for license rights and limitations (MIT)
+See the [LICENSE] (LICENSE.md) for license rights and limitations (MIT)
