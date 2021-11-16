@@ -22,16 +22,16 @@ const QuizCard = (props) => {
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     const [countDownFinished, setCountDownFinished] = useState(false)
 
-/*     const checkAnswer = useCallBack( // Breaks the code
-        (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
-        setSelectedAnswer(response);
-        if (response === quizList[questCount].correct_answer) {
-            setScore(score + 1)
-            setGifSource(GetRandomGif("right"))
-        } else setGifSource(GetRandomGif("wrong"))
-
-        setNextBtnDisabled(false)
-    }, [quizList, questCount, score, setScore]) */
+    /*     const checkAnswer = useCallBack( // Breaks the code
+            (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+            setSelectedAnswer(response);
+            if (response === quizList[questCount].correct_answer) {
+                setScore(score + 1)
+                setGifSource(GetRandomGif("right"))
+            } else setGifSource(GetRandomGif("wrong"))
+    
+            setNextBtnDisabled(false)
+        }, [quizList, questCount, score, setScore]) */
 
     /**
      * Receive the selected answer value and check it with the correct one
@@ -60,7 +60,7 @@ const QuizCard = (props) => {
         if (quizList[questCount].questNum >= quizList.length) {
             const newResults = [...results]
             // we save the selected category and we calculate the result in % and
-            newResults.push({catNb:selectedCategory, scorePc:Math.round((score / (quizList.length) * 100))})
+            newResults.push({ catNb: selectedCategory, scorePc: Math.round((score / (quizList.length) * 100)) })
             setResults(newResults)
             // then we move to the next step: Score section
             setAppStep(3)
@@ -82,7 +82,7 @@ const QuizCard = (props) => {
     const handleSelect = (element) => {
         if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
         else if (element === quizQuestion.correct_answer) return "right-answer-btn"
-        else return null
+        else return null // for the wrong answers that were not selected
     }
 
     return (
