@@ -19,12 +19,6 @@
 
 <br />
 
-- About the project
-- Tools used
-- How to use the app
-
-<br />
-
 
 <h2>About the project</h2>
 
@@ -32,8 +26,8 @@
 
 <p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
 
-  - <a href="https://github.com/vmalep">Pierre Van Male</a>
-  - <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
+  - <a href="https://github.com/vmalep">Pierre Van MALE</a>
+  - <a href="https://github.com/JanaKudlickova">Jana KUDLICKOVA</a>
   - <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
 <br />
@@ -72,4 +66,4 @@ React Router
 <br />
 
 <h2>License</h2>
-See the [LICENSE] (LICENSE.md) for license rights and limitations (MIT)
+See the <a href="https://github.com/vmalep/witty/blob/master/LICENSE.md">LICENSE</a> for license rights and limitations (MIT)
