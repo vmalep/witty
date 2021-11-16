@@ -22,7 +22,7 @@ const QuizCard = (props) => {
     const [gifSource, setGifSource] = useState(GetRandomGif("waiting"))
     const [countDownFinished, setCountDownFinished] = useState(false)
 
-    const checkAnswer = useCallBack(
+/*     const checkAnswer = useCallBack(
         (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
         setSelectedAnswer(response);
         if (response === quizList[questCount].correct_answer) {
@@ -31,7 +31,17 @@ const QuizCard = (props) => {
         } else setGifSource(GetRandomGif("wrong"))
 
         setNextBtnDisabled(false)
-    }, [quizList, questCount, score, setScore])
+    }, [quizList, questCount, score, setScore]) */
+
+    const checkAnswer = (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
+        setSelectedAnswer(response);
+        if (response === quizList[questCount].correct_answer) {
+            setScore(score + 1)
+            setGifSource(GetRandomGif("right"))
+        } else setGifSource(GetRandomGif("wrong"))
+
+        setNextBtnDisabled(false)
+    }
 
     const handleNext = () => {
         // If we have reached the last question...
@@ -49,7 +59,7 @@ const QuizCard = (props) => {
 
     useEffect(() => {
         countDownFinished && checkAnswer("no answer")
-    }, [countDownFinished, checkAnswer])
+    }, [countDownFinished])
 
     const handleSelect = (element) => {
         if (selectedAnswer === element && selectedAnswer !== quizQuestion.correct_answer) return "wrong-answer-btn"
