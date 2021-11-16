@@ -1,15 +1,22 @@
 const ChooseCountDown = (props) => {
-    const {countDown, setCountDown} = props;
-    
+    const { countDown, setCountDown } = props;
+
     function handleCountDown() {
         setCountDown(!countDown)
     }
 
     return (
-           <>
-               <h2>Countdown <input type="checkbox" onChange={handleCountDown} checked={countDown} /></h2>
-          </>
-       )
-   }
+            <button
+                onClick={() => handleCountDown()}
+                className={
+                    countDown
+                    ? "action-btn"
+                    : "disabled-btn"
+                }
+            >
+                Countdown
+            </button>
+    )
+}
 
-   export default ChooseCountDown;
+export default ChooseCountDown;
