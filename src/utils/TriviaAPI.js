@@ -1,3 +1,6 @@
+/**
+ * List of possible categories and their respective base color
+ */
 export const TriviaAPI = [ 
     {
         catName: "History",

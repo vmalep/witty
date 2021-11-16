@@ -1,11 +1,13 @@
 import ShuffleArray from './ShuffleArray'
 import DecodeSpecialChar from './DecodeSpecialChar'
 
+/**
+ * Get the downloaded API data and format it into the right array of objects format
+ * @param {string} api 
+ * @param {array} apiData 
+ * @returns {array}
+ */
 function QuizGenerator(api, apiData) {
-/*     console.log("api: " + api)
-    console.log("apiData: ", apiData) */
-    /* const [quizList, setQuizList] = useState({}) */
-
     // The QuizList to be return, with always the same structure:
     // {
     //          [

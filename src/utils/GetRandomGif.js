@@ -1,3 +1,8 @@
+/**
+ * Return a random gif from the list, filtered on the category number if any
+ * @param {integer} category 
+ * @returns {object}
+ */
 function GetRandomGif(category) {
 
     const gifList = [
@@ -244,9 +249,9 @@ function GetRandomGif(category) {
          
     ]
 
-    const catGif = category.length !== "" // if a category has been specified
-        ? gifList.filter(element => element.category === category) // filter on it
-        : gifList // or just give the full list of gif
+    const catGif = category.length !== ""
+        ? gifList.filter(element => element.category === category)
+        : gifList
 
     return catGif[Math.floor(Math.random() * catGif.length)]
 }

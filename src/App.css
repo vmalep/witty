@@ -8,16 +8,16 @@
 html {
   --hsl-base-color: 34;
   --hsl-s: 100%;
-  --hsl-l: 60%;
+  --hsl-l: 50%;
 
   --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
-  --color-secondary: hsl(var(--hsl-base-color), 45%, 45%);
+  --color-secondary: hsl(var(--hsl-base-color), 100%, 70%);
   --color-background: hsl(var(--hsl-base-color), 50%, 96%);
   --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
   --white-color: hsl(0, 100%, 100%);
   --black-color: hsl(0, 0%, 16%);
   --disabled-color: hsl(0, 0%, 50.2%);
-  --right-color: hsl(115, var(--hsl-s), var(--hsl-l));
+  --right-color: hsl(115, 70%, 50%);
   --wrong-color: hsl(0, 100%, 50%);
   --exit-color: hsl(315, var(--hsl-s), var(--hsl-l));
 }

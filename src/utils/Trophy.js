@@ -1,3 +1,6 @@
+/**
+ * List of trophies
+ */
 const Trophy = [
     {src: "https://www.acmebrooklyn.com/wp-content/uploads/2021/06/TR067.jpg", alt: "firstPlace"},
     {src: "https://www.trophysupermarket.com/media/catalog/product/cache/1/image/8c93d93e589e0bf9e4f87044ad269d3f/r/s/rs93.jpg", alt: "secondPlace"},
