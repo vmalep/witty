@@ -11,7 +11,7 @@ html {
   --hsl-l: 50%;
 
   --color-primary: hsl(var(--hsl-base-color), var(--hsl-s), var(--hsl-l));
-  --color-secondary: hsl(var(--hsl-base-color), 100%, 70%);
+  --color-secondary: hsl(var(--hsl-base-color), 100%, 65%);
   --color-background: hsl(var(--hsl-base-color), 80%, 94%);
   --box-shadow: hsla(0, 0%, 0%, 0.35) 0px 5px 15px;
   --white-color: hsl(0, 100%, 100%);
@@ -106,6 +106,7 @@ button {
 .answers-btn {
   background-color: var(--color-secondary);
   overflow-wrap: break-word;
+  font-size: 15px;
 }
 
 .right-answer-btn{
