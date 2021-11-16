@@ -29,7 +29,7 @@
 
 <br />
 
-This project was done during the 5 months bootcamp of Wild Code School by 3 students :
+<h3>This project was done during the 5 months bootcamp of Wild Code School by 3 students</h3>
 - <a href="https://github.com/vmalep">Pierre Van Male</a>
 - <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
 - <a href="https://github.com/gc2211">Gauthier CHATEL</a>
@@ -45,7 +45,9 @@ This project was done during the 5 months bootcamp of Wild Code School by 3 stud
 <h2>Tools used :</h2>
 We used Jira as our main tool to assist in the project management. For day to day communication we used Slack and Google Meet.
 
-<p>How the app works :</p>
+<br />
+
+<h2>How the app works :</h2>
  
   - 1 Select your avatar
   - 2 Choose your username
@@ -62,7 +64,7 @@ The main frameworks and technologies used to build our Project are the following
 React (with Hooks)
 React Router
 
-- API used : 
+<h2>API used</h2>
 - <a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
 
 <br />
