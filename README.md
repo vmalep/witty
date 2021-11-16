@@ -26,7 +26,7 @@
 
 <p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
 
-  - <a href="https://github.com/vmalep">Pierre Van MALE</a>
+  - <a href="https://github.com/vmalep">Pierre VAN MALE</a>
   - <a href="https://github.com/JanaKudlickova">Jana KUDLICKOVA</a>
   - <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
