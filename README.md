@@ -18,14 +18,16 @@
 
 <br />
 
-About the project
-Tools used
-How to use the app
+- About the project
+- Tools used
+- How to use the app
 
 <br />
 
 
 <h2>About the project</h2>
+
+<br />
 
 This project was done during the 5 months bootcamp of Wild Code School by 3 students :
 - <a href="https://github.com/vmalep">Pierre Van Male</a>
@@ -59,6 +61,9 @@ The main frameworks and technologies used to build our Project are the following
 
 React (with Hooks)
 React Router
+
+- API used : 
+- <a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
 
 <br />
 
