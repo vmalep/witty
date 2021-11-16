@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT) 
+![Javascript](https://aleen42.github.io/badges/src/javascript.svg) ![React](https://aleen42.github.io/badges/src/react.svg) 
+![React-Router](https://aleen42.github.io/badges/src/router.svg) ![NodeJs](https://github.com/aleen42/badges/raw/master/src/node.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+<p>
 
-### `npm start`
+<img src="./public/favicon.ico"  alt="Logo"  width="auto"  height="150">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h1>Witty</h1>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ 
+ <p>Our project is a single page app called "Witty" . Witty allows you to learn and expand your knowledge on different topics in a funny way.</p>
 
-### `npm test`
+<a href="https://witty-quiz.netlify.app//">View Project</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Table of Contents:
 
-### `npm run build`
+About the project
+Tools used
+How to use the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+About the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was done during the 5 months bootcamp of Wild Code School by 3 students :
+- <a href="https://github.com/vmalep">Pierre Van Male</a>
+- <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
+- <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<img src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
+>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Tools used
+We used Jira as our main tool to assist in the project management. For day to day communication we used Slack and Google Meet.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+How the app works :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1.Select your avatar
+2.Choose your username
+3.Countdown on/off
+4.Pick the difficulty and category in which you want test your knowledge in
+5.Click next and ... you are good to go !
+6.Exit the game anytime by simply clicking the Exit button 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+About the code
+The main frameworks and technologies used to build our Project are the following:
 
-## Learn More
+React (with Hooks)
+React Router
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+See the LICENSE file for license rights and limitations (MIT)
