@@ -16,24 +16,31 @@
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
 
-Table of Contents:
+<br />
 
 About the project
 Tools used
 How to use the app
 
-About the project
+<br />
+
+
+<h2>About the project</h2>
 
 This project was done during the 5 months bootcamp of Wild Code School by 3 students :
 - <a href="https://github.com/vmalep">Pierre Van Male</a>
 - <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
 - <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
+<br />
+
 
 <img src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
->
 
-Tools used
+<br />
+
+
+<h2>Tools used :</h2>
 We used Jira as our main tool to assist in the project management. For day to day communication we used Slack and Google Meet.
 
 <p>How the app works :</p>
@@ -45,12 +52,15 @@ We used Jira as our main tool to assist in the project management. For day to da
   - 5 Click next and ... you are good to go !
   - 6 Exit the game anytime by simply clicking the Exit button 
  
+<br />
 
-About the code
+<h2>About the code</h2>
 The main frameworks and technologies used to build our Project are the following:
 
 React (with Hooks)
 React Router
 
-License:
+<br />
+
+<h2>License:</h2>
 See the LICENSE file for license rights and limitations (MIT)
