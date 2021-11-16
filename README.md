@@ -12,7 +12,8 @@
 <h1>Witty</h1>
 
  
- <p>Our project is a single page app called "Witty" . Witty allows you to learn and expand your knowledge on different topics in a funny way.</p>
+ <p>The project is a single page app named "Witty" .
+ Witty allows you to learn and expand your knowledge depending on the topic you choose.</p>
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
 
@@ -29,32 +30,32 @@
 
 <br />
 
-<h3>This project was done during the 5 months bootcamp of Wild Code School by 3 students</h3>
-- <a href="https://github.com/vmalep">Pierre Van Male</a>
-- <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
-- <a href="https://github.com/gc2211">Gauthier CHATEL</a>
+<p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
+ <a href="https://github.com/vmalep">Pierre Van Male</a>
+ <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
+ <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
 <br />
 
 
-<img src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
+<img display="center" src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
 
 <br />
 
 
-<h2>Tools used :</h2>
+<h2>Tools used </h2>
 We used Jira as our main tool to assist in the project management. For day to day communication we used Slack and Google Meet.
 
 <br />
 
-<h2>How the app works :</h2>
+<h2>How the app works</h2>
  
-  - 1 Select your avatar
-  - 2 Choose your username
-  - 3 Countdown on/off
-  - 4 Pick the difficulty and category in which you want test your knowledge in
-  - 5 Click next and ... you are good to go !
-  - 6 Exit the game anytime by simply clicking the Exit button 
+  1 Select your avatar
+  2 Choose your username
+  3 Countdown on/off
+  4 Pick the difficulty and category in which you want test your knowledge in
+  5 Click next and ... you are good to go !
+  6 Exit the game anytime by simply clicking the Exit button 
  
 <br />
 
@@ -64,10 +65,10 @@ The main frameworks and technologies used to build our Project are the following
 React (with Hooks)
 React Router
 
-<h2>API used</h2>
-- <a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
+<h2>API</h2>
+<a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
 
 <br />
 
-<h2>License:</h2>
+<h2>License</h2>
 See the LICENSE file for license rights and limitations (MIT)
