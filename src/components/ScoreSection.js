@@ -13,7 +13,7 @@ const ScoreSection = (props) => {
 
   return (
     <>
-      <img src={GetTrophy(scorePc)} alt="your trophy" resizemode="cover" height="200px" />
+      <img className='trophy-img'  src={GetTrophy(scorePc)} alt="your trophy" resizemode="cover" height="200px" />
       <h2>Hi {userName}!</h2>
       <h2>Your last score is {scorePc}%</h2>
       <button onClick={handleClick}>Start again!</button>

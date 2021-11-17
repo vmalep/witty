@@ -280,6 +280,10 @@ button {
   color: var(--color-primary);
 }
 
+.trophy-img {
+  margin:1rem;
+}
+
 @media only screen and (min-width: 490px) {
   .avatarbox {
     display: flex;
@@ -322,6 +326,5 @@ button {
     padding-left: 100px;
     padding-right: 100px;
   }
-  
 
 }
