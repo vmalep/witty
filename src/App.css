@@ -128,15 +128,15 @@ button {
 .unselected-btn {
   background-color: var(--color-secondary);
   border-radius: 80px;
-/*   width: 100px;
-  margin: 5px; */
+  /* width: 100px;
+  margin: 5px;*/
 }
     
 .selected-btn {
   background-color: var(--color-primary);
   border-radius: 80px;
-/*   width: 100px;
-  margin: 5px; */
+  /* width: 100px;
+  margin: 5px;*/
 }
 
 /* Flex classes */
@@ -265,6 +265,10 @@ button {
   font-weight: bold;
 }
 
+.settings-color {
+  color: var(--color-primary);
+}
+
 @media only screen and (min-width: 490px) {
   .avatarbox {
     display: flex;
@@ -293,7 +297,19 @@ button {
     justify-content: center;
   }
 
+  .answers-btn {
+    flex-basis: 250px;
+    font-size: 18px;
+  }
+
   .category-btn {
     flex-basis: 160px;
   }
+
+  .questions {
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
 }
