@@ -272,6 +272,10 @@ button {
   font-weight: bold;
 }
 
+.smaller-font{
+  font-size: smaller;
+}
+
 .settings-color {
   color: var(--color-primary);
 }
@@ -319,4 +323,5 @@ button {
     padding-right: 100px;
   }
   
+
 }

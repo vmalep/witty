@@ -13,6 +13,7 @@ const QuizCard = (props) => {
         setAppStep,
         countDown,
         selectedCategory,
+        selectedDifficulty,
         setResults,
         results
     } = props
@@ -50,7 +51,12 @@ const QuizCard = (props) => {
         if (quizList[questCount].questNum >= quizList.length) {
             const newResults = [...results]
             // we save the selected category and we calculate the result in % and
-            newResults.push({ catNb: selectedCategory, scorePc: Math.round((score / (quizList.length) * 100)) })
+            newResults.unshift({    // unshift rather than push, so the last results appear first
+                catNb: selectedCategory,
+                difficultyLevel: selectedDifficulty,
+                countDown: countDown,
+                scorePc: Math.round((score / (quizList.length) * 100))
+            })
             setResults(newResults)
             // then we move to the next step: Score section
             setAppStep(3)
