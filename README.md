@@ -5,7 +5,7 @@
 
 <br />
  
-                            <img align="center" src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
+<img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
 
 <br />
 
@@ -34,7 +34,7 @@
 <br />
 
 
-                            <img algin="center" src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
+<img src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
 
 <br />
 
