@@ -11,7 +11,6 @@ const ScoreSection = (props) => {
     setAppStep(1)
   }
 
-  console.log(results)
   return (
     <>
       <img src={GetTrophy(scorePc)} alt="your trophy" resizemode="cover" height="200px" />
