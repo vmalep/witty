@@ -1,7 +1,8 @@
 const Header = () => {
     return (
     <header>
-        <h1>WITTY</h1>
+        <img src='./mstile-150x150.png' alt='logo'/>
+        <h1>ITTY</h1>
     </header>
     );
 };
