@@ -64,6 +64,7 @@ function QuizSection(props) {
                                 setAppStep={setAppStep}
                                 countDown={countDown}
                                 selectedCategory={selectedCategory}
+                                selectedDifficulty={selectedDifficulty}
                                 setResults={setResults}
                                 results={results} />
                         )

@@ -16,7 +16,7 @@ function App() {
   const [selectedAvatar, setSelectedAvatar] = useState({});
   const [selectedDifficulty, setSelectedDifficulty] = useState("None");
   const [countDown, setCountDown] = useState(false); // In seconds
-  const [results, setResults] = useState([]); // results.catNb and results.scorePc for each round of question
+  const [results, setResults] = useState([]); // {catNb (integer), difficultyLevel (string), scorePc (integer)} for each round of question
 
   return (
     <div className="App">
