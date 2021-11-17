@@ -5,7 +5,7 @@
 
 <br />
  
-   <img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
+   <img align="center" src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
 
 <br />
 
@@ -13,7 +13,8 @@
 
  
  <p>The project is a single page app named Witty .
- Witty allows you to learn and expand your knowledge depending on the topic you choose.</p>
+ Witty allows you to learn and expand your knowledge depending on the topic you choose.Your new favorite pass time while waiting on your next meetings.
+</p>
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
 
