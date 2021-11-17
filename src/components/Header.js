@@ -1,8 +1,10 @@
+
+import logo from '../WittyLogo.png';
+
 const Header = () => {
     return (
     <header>
-        <img src='./mstile-150x150.png' alt='logo'/>
-        <h1>ITTY</h1>
+        <img src={logo} alt='logo'/>
     </header>
     );
 };
