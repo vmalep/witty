@@ -5,7 +5,7 @@
 
 <br />
  
-<img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
+<img src="./WittyLogo.png"  alt="Logo"  width="auto"  height="150"/>
 
 <br />
 
