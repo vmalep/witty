@@ -17,6 +17,7 @@ const Category = (props) => {
     return (
         <>
             <h2>Select your category</h2>
+            <section className="flex-wrap">
             {TriviaAPI.map((category, index) => {
 
                 const primaryH = colorConvert.keyword.hsl(category.color)[0]
@@ -33,6 +34,7 @@ const Category = (props) => {
                     >{category.catName}</button>
                 )
             })}
+            </section>
         </>
     )
 }

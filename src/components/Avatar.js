@@ -19,7 +19,7 @@ const Avatar = (props) => {
           <h2>Select your Avatar</h2>
           <div className="avatarbox">
             {avatarImages.map((avatar, index) => (
-                <img 
+                <img
                 key={index}
                 onClick={() => handleChange(avatar)} 
                 className={selectedAvatar.alt === avatar.alt ? "avatar-on" : "avatar"} src ={avatar.src} alt={avatar.alt}/>

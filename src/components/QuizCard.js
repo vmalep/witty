@@ -92,10 +92,10 @@ const QuizCard = (props) => {
                 }
             </div>
             <div className="flex-spacebetween">
-                <p>Difficulty: {quizQuestion.difficulty}</p>
-                <p>Score: {score}</p>
+                <p><span className="settings-color">Difficulty: </span>{quizQuestion.difficulty}</p>
+                <p><span className="settings-color">Score: </span>{score}</p>
             </div>
-            <p>question {quizQuestion.questNum}: {quizQuestion.question}</p>
+            <p className="questions"><span className="settings-color">question {quizQuestion.questNum}: </span>{quizQuestion.question}</p>
             <div className="flex-wrap">
                 {quizQuestion.possible_answers.map((element, index) => {
                     return (
