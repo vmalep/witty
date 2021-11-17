@@ -269,6 +269,10 @@ button {
   font-weight: bold;
 }
 
+.score img {
+  height: 15px;
+}
+
 .smaller-font{
   font-size: smaller;
 }
