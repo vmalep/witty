@@ -34,7 +34,7 @@
 <br />
 
 
-<img src="./public/HomePage.png"  alt="Screenshot"  width="auto"  height="150">
+<img src="./src/HomePage.png"  alt="Screenshot"  width="auto"  height="150">
 
 <br />
 
