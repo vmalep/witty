@@ -24,7 +24,7 @@
 
 <br />
 
-<p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
+<p>This project lasted 5 weeks and was part of a 5 months bootcamp at Wild Code School and made by the following developers. </p>
 
   - <a href="https://github.com/vmalep">Pierre VAN MALE</a>
   - <a href="https://github.com/JanaKudlickova">Jana KUDLICKOVA</a>
