@@ -5,7 +5,7 @@
 
 <br />
  
-   <img src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
+<img src="./src/WittyLogo.png"  alt="Logo"  width="auto"  height="150"/>
 
 <br />
 
@@ -13,15 +13,10 @@
 
  
  <p>The project is a single page app named Witty .
- Witty allows you to learn and expand your knowledge depending on the topic you choose.</p>
+ Witty allows you to learn and expand your knowledge depending on the topic you choose.It is your new favorite pass time while waiting on your next meetings.
+</p>
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
-
-<br />
-
-- About the project
-- Tools used
-- How to use the app
 
 <br />
 
@@ -30,16 +25,16 @@
 
 <br />
 
-<p>This project was done during the 5 months bootcamp of Wild Code School by 3 students</p>
+<p>This project lasted 5 weeks and was part of a 5 months bootcamp at Wild Code School and made by the following developers. </p>
 
-  - <a href="https://github.com/vmalep">Pierre Van Male</a>
-  - <a href="https://github.com/JanaKudlickova">Jana Kudlickova</a>
+  - <a href="https://github.com/vmalep">Pierre VAN MALE</a>
+  - <a href="https://github.com/JanaKudlickova">Jana KUDLICKOVA</a>
   - <a href="https://github.com/gc2211">Gauthier CHATEL</a>
 
 <br />
 
 
-<img display="center" src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
+<img src="./public/HomePage.png"  alt="Screenshot"  width="auto"  height="150">
 
 <br />
 
@@ -64,12 +59,11 @@ We used Jira as our main tool to assist in the project management. For day to da
 The main frameworks and technologies used to build our Project are the following:
 
 React (with Hooks)
-React Router
-
+ 
 <h2>API</h2>
 <a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
 
 <br />
 
 <h2>License</h2>
-See the [LICENSE] (LICENSE.md) for license rights and limitations (MIT)
+See the <a href="https://github.com/vmalep/witty/blob/master/LICENSE.md">LICENSE</a> for license rights and limitations (MIT)
