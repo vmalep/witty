@@ -5,7 +5,7 @@
 
 <br />
  
-   <img align="center" src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
+                            <img align="center" src="public/apple-touch-icon.png"  alt="Logo"  width="auto"  height="150"/>
 
 <br />
 
@@ -13,7 +13,7 @@
 
  
  <p>The project is a single page app named Witty .
- Witty allows you to learn and expand your knowledge depending on the topic you choose.Your new favorite pass time while waiting on your next meetings.
+ Witty allows you to learn and expand your knowledge depending on the topic you choose.It is your new favorite pass time while waiting on your next meetings.
 </p>
 
 <a href="https://witty-quiz.netlify.app//">View Project</a>
@@ -34,7 +34,7 @@
 <br />
 
 
-<img display="center" src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
+                            <img algin="center" src="./public/App.png"  alt="Screenshot"  width="auto"  height="150">
 
 <br />
 
@@ -59,8 +59,7 @@ We used Jira as our main tool to assist in the project management. For day to da
 The main frameworks and technologies used to build our Project are the following:
 
 React (with Hooks)
-React Router
-
+ 
 <h2>API</h2>
 <a href="https://opentdb.com/api_config.php">OPEN TRIVIA DATABASE</a>
 
