@@ -29,7 +29,7 @@ html {
 
 header {
   background-color: var(--color-primary);
-
+  width: 100%;
   height: 125px;
   /* margin-top: -3em; */
   display: flex;
