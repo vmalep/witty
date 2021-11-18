@@ -1,10 +1,13 @@
 
 import logo from '../WittyLogo.png';
 
-const Header = () => {
+const Header = (props) => {
+    const { setAppStep} = props;
+
     return (
     <header>
-        <img src={logo} alt='logo'/>
+        <button onClick={() => setAppStep(0)} />
+            {/* <img src={logo} alt='logo' /> */}
     </header>
     );
 };

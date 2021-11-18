@@ -6,7 +6,8 @@ const NickName = (props) => {
         <input
             placeholder="Enter your nickname"
             className="nickname"
-            onChange={e => setUserName(e.target.value)} />
+            onChange={e => setUserName(e.target.value)}
+        />
     )
 }
 
