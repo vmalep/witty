@@ -31,7 +31,7 @@ function QuizSection(props) {
     useEffect(() => {
         axios.get(quizURL)
           .then(res => setApiData(res.data.results))
-          /* .then(setDataLoaded(true)) */
+          .then(setDataLoaded(true))
           .catch(err => console.log(err))
         }, [quizURL])
     
