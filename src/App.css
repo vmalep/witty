@@ -84,6 +84,7 @@ footer p {
 
 img {
   margin: 1rem;
+  border-radius: 10px;
 }
 
 /* Button definitions */
