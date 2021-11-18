@@ -9,8 +9,6 @@ function GetTrophy(scorePc) {
         "https://cdn11.bigcommerce.com/s-241f7/images/stencil/2048x2048/products/1378/3347/New_Couch_Potata__27241.1610313831.jpg?c=2"
     ]
     
-    console.log('test: '+ Trophy[3])
-    
     if (scorePc <= 25) return(Trophy[3])
         else if (scorePc <= 50) return(Trophy[2])
         else if (scorePc <= 75) return(Trophy[1])

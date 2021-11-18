@@ -1,6 +1,3 @@
-
-import logo from '../WittyLogo.png';
-
 const Header = (props) => {
     const { setAppStep} = props;
 
