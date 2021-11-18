@@ -30,7 +30,7 @@ const QuizCard = (props) => {
      * Then activate the Next button
      * @param {string} response 
      */
-        const checkAnswer = useCallback( // Breaks the code
+        const checkAnswer = useCallback(
             (response) => { // Receive the answer and check if correct. If so, increment the score. Increment the questCount and update the current question to the new index.
             setSelectedAnswer(response);
             if (response === quizList[questCount].correct_answer) {
@@ -83,14 +83,13 @@ const QuizCard = (props) => {
 
     return (
         <div className="quiz-card">
-            <div className="quiz-animation">
-                {(countDown && !selectedAnswer) &&
-                    <CountDownTimer setCountDownFinished={setCountDownFinished} />
-                }
-                {(!countDown || selectedAnswer) &&
-                    <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
-                }
-            </div>
+            {(countDown && !selectedAnswer) &&
+                <CountDownTimer setCountDownFinished={setCountDownFinished} />
+            }
+            {(!countDown || selectedAnswer) &&
+                <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
+            }
+            
             <div className="flex-spacebetween">
                 <p><span className="settings-color">Difficulty: </span>{quizQuestion.difficulty}</p>
                 <p><span className="settings-color">Score: </span>{score}</p>

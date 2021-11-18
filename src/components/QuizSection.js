@@ -47,7 +47,7 @@ function QuizSection(props) {
     return (
         <>
             {   // Checking if the data is there
-                dataLoaded &&
+                dataLoaded ?
                 quizList
                     .filter((element) => quizList.indexOf(element) === questCount)
                     .map((element, index) => {
@@ -69,6 +69,12 @@ function QuizSection(props) {
                                 results={results} />
                         )
                     })
+                : <img
+                    src="https://c.tenor.com/QWkK5z1NnbwAAAAC/no-brain-loading.gif"
+                    resizemode="cover"
+                    height="200px"
+                    alt="Loading..."
+                />
             }
         </>
     )

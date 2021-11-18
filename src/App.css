@@ -82,6 +82,10 @@ footer p {
   color: var(--white-color);
 }
 
+img {
+  margin: 1rem;
+}
+
 /* Button definitions */
 
 button {
@@ -262,11 +266,6 @@ button {
   font-weight: bold;
 }  
 
-.quiz-animation{
-  margin:1rem;
-  height: 200px;
-}
-
 .score {
   font-size: 24px;
   font-weight: bold;
@@ -278,10 +277,6 @@ button {
 
 .settings-color {
   color: var(--color-primary);
-}
-
-.trophy-img {
-  margin:1rem;
 }
 
 @media only screen and (min-width: 490px) {
