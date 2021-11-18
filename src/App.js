@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setAppStep={setAppStep}/>
 
       {appStep === 0
         && <UserInit

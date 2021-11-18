@@ -24,7 +24,7 @@ const UserInit = (props) => {
     return (
         <div className="flex-column">
             <Avatar selectedAvatar={selectedAvatar} setSelectedAvatar={setSelectedAvatar}/> 
-            <NickName setUserName={setUserName} />
+            <NickName userName={userName} setUserName={setUserName} />
             <button
                 onClick={() => setAppStep(1)}
                 disabled={nextBtnDisabled}
