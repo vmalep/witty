@@ -13,7 +13,7 @@ export const TriviaAPI = [
         color: "blue"
     },
     {
-        catName:"Science & Nature",
+        catName:"Science",
         catNb: "17",
         color:"red"
     },
