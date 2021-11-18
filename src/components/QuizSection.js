@@ -70,7 +70,7 @@ function QuizSection(props) {
                         )
                     })
                 : <img
-                    src="https://c.tenor.com/QWkK5z1NnbwAAAAC/no-brain-loading.gif"
+                    src="https://media3.giphy.com/media/LFEjnqmVmbKk8/giphy.gif"
                     resizemode="cover"
                     height="200px"
                     alt="Loading..."
