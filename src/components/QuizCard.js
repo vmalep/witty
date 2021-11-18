@@ -110,18 +110,17 @@ const QuizCard = (props) => {
                 })}
             </div>
             <div className="flex-wrap">
+                <button className="exit-btn"
+                    onClick={() => setAppStep(1)}
+                >
+                    Exit
+                </button>
                 <button
                     onClick={handleNext}
                     disabled={nextBtnDisabled}
                     className={nextBtnDisabled ? 'disabled-btn' : 'action-btn'}
                 >
                     Next
-                </button>
-
-                <button className="exit-btn"
-                    onClick={() => setAppStep(1)}
-                >
-                    Exit
                 </button>
             </div>
         </div >
