@@ -237,11 +237,6 @@ button {
   margin: 20px;
   box-shadow: var(--box-shadow);
 }    
-/* 
-.selected-btn {
-  background-color: white;
-  border: solid black 3px
-} */
 
 .current-player {
   display: flex;
@@ -279,7 +274,11 @@ button {
   color: var(--black-color);
   text-transform: uppercase;
   font-weight: bold;
-}  
+}
+
+.countdown{
+  margin: 1rem;
+}
 
 .score {
   font-size: 24px;

@@ -84,7 +84,9 @@ const QuizCard = (props) => {
     return (
         <div className="quiz-card">
             {(countDown && !selectedAnswer) &&
-                <CountDownTimer setCountDownFinished={setCountDownFinished} />
+                <div class='countdown'>
+                    <CountDownTimer setCountDownFinished={setCountDownFinished} />
+                </div>
             }
             {(!countDown || selectedAnswer) &&
                 <img src={gifSource.src} resizemode="cover" height="200px" alt="Loading..." />
